@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand">CV Craft Studio</div>
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About Us</a>
+          <a class="nav-link" href="our-service.html">Our Service</a>
+          <a class="nav-link" href="our-packages.html">Our Packages</a>
+          <a class="nav-link" href="our-work.html">Our Work</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="hero__eyebrow">Book time</p>
+          <h1>Tell me about the next role and I will build your digital story.</h1>
+          <p>
+            I reply within one business day. We can sketch your scope, timeline, and preferred package before the call.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="section-grid">
+            <article class="contact-panel">
+              <form id="contact-form">
+                <label>
+                  Name
+                  <input type="text" name="name" required placeholder="Jordan Kim" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" required placeholder="you@email.com" />
+                </label>
+                <label>
+                  Focus area
+                  <select name="focus">
+                    <option value="cv">CV Site</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="packages">Service + Packages</option>
+                    <option value="optimizer">Optimizer Retainer</option>
+                  </select>
+                </label>
+                <label>
+                  Timeline &amp; goals
+                  <textarea name="message" rows="3" placeholder="Tell me about your next step" required></textarea>
+                </label>
+                <button type="submit" class="button">Send request</button>
+              </form>
+            </article>
+            <article class="contact-panel">
+              <h3>Studio details</h3>
+              <p>Email me at <a href="mailto:hello@cvcraft.studio">hello@cvcraft.studio</a> or reply via LinkedIn.</p>
+              <p>Enough bandwidth for two intense launches per month—grab your preferred slot quickly.</p>
+              <p>Need an invoice? Reply with the scope and I will share the paperwork within one business day.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© 2026 CV Craft Studio — Conversations that lead to decisive launches.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.reset();
+        alert('Request received. Expect a reply within one business day.');
+      });
+    </script>
+  </body>
+</html>
