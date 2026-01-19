@@ -10,6 +10,116 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #128C7E) !important;
+      color: white !important;
+      border: none !important;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(135deg, #128C7E, #075E54) !important;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3) !important;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-method:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--primary);
+      transform: translateX(5px);
+    }
+
+    .contact-method .icon {
+      font-size: 2rem;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .contact-method .details h4 {
+      margin: 0 0 0.5rem;
+      color: var(--text-primary);
+      font-size: 1.1rem;
+    }
+
+    .contact-method .details p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-method .details a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .big-whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .promise-box {
+      background: linear-gradient(135deg, rgba(245, 165, 36, 0.1), rgba(245, 165, 36, 0.05));
+      border: 1px solid rgba(245, 165, 36, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .promise-box h4 {
+      color: var(--primary-strong);
+      margin: 0 0 1rem;
+      font-size: 1.3rem;
+    }
+
+    .promise-box p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+      border-color: var(--primary);
+    }
+  </style>
 </head>
 
 <body>
@@ -32,81 +142,140 @@
         <h1>We're Here 24/7 — Ready to Help You Shine.</h1>
         <p>
           ඕන වෙලාවක Call කරන්න msg කරන්න. We're available around the clock to discuss
-          your CV needs. No pressure, no commitment — just a friendly conversation about your career goals.
+          your CV needs. No pressure, no commitment — just a friendly conversation!
         </p>
       </section>
 
       <section class="section">
         <div class="section-grid">
+
+          <!-- Contact Methods -->
           <article class="contact-panel">
-            <h3>Send Us a Message</h3>
-            <form id="contact-form">
-              <label>
-                Your Name / ඔයාගෙ නම
-                <input type="text" name="name" required placeholder="Enter your name" />
-              </label>
-              <label>
-                Email / ඊමේල්
-                <input type="email" name="email" required placeholder="you@email.com" />
-              </label>
-              <label>
-                Phone / දුරකතන අංකය
-                <input type="tel" name="phone" placeholder="+94 XX XXX XXXX" />
-              </label>
-              <label>
-                What do you need? / ඔයාට මොනවද ඕනේ?
-                <select name="focus">
-                  <option value="cv">Professional CV</option>
-                  <option value="cv-linkedin">CV + LinkedIn</option>
-                  <option value="full-package">Complete Package</option>
-                  <option value="other">Other / Custom</option>
-                </select>
-              </label>
-              <label>
-                Tell us about your goals / ඔයාගෙ අරමුණ
-                <textarea name="message" rows="4"
-                  placeholder="Tell us about your career goals, target position, and anything else you'd like us to know..."
-                  required></textarea>
-              </label>
-              <button type="submit" class="button">Send Message / යවන්න</button>
-            </form>
-          </article>
-          <article class="contact-panel">
-            <h3>📱 Get in Touch Directly</h3>
-            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-              <strong>අපේ ඉන්නෙ හරිම friendly කට්ටියක්!</strong>
-              <br>
-              Feel free to reach out through any channel you prefer.
-            </p>
+            <h3>📱 Get in Touch</h3>
 
-            <div style="margin-bottom: 2rem;">
-              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">📧 Email</h4>
-              <p><a href="mailto:hello@theelegantgrid.com">hello@theelegantgrid.com</a></p>
+            <!-- WhatsApp - Primary -->
+            <div class="contact-method"
+              style="background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3);">
+              <div class="icon">💬</div>
+              <div class="details">
+                <h4>WhatsApp (Fastest Response!)</h4>
+                <p><a href="https://wa.me/94756557838" target="_blank">+94 75 655 7838</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Click below to message us directly!</p>
+              </div>
             </div>
 
-            <div style="margin-bottom: 2rem;">
-              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">💬 WhatsApp / Viber</h4>
-              <p>Message us anytime — we respond fast!</p>
+            <!-- Big WhatsApp Button -->
+            <a class="button whatsapp-btn big-whatsapp-btn"
+              href="https://wa.me/94756557838?text=Hi%20The%20Elegant%20Grid!%20%F0%9F%91%8B%20I%27m%20interested%20in%20your%20CV%20services.%20Can%20you%20help%20me%3F"
+              target="_blank">
+              💬 Chat on WhatsApp Now
+            </a>
+
+            <!-- Phone -->
+            <div class="contact-method">
+              <div class="icon">📞</div>
+              <div class="details">
+                <h4>Phone / Call</h4>
+                <p><a href="tel:+94756557838">+94 75 655 7838</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Available for calls anytime!</p>
+              </div>
             </div>
 
-            <div style="margin-bottom: 2rem;">
-              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">⏰ Availability</h4>
-              <p><strong>24/7</strong> — We're always here for you!</p>
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="icon">📧</div>
+              <div class="details">
+                <h4>Email</h4>
+                <p><a href="mailto:theelegantgrid@gmail.com">theelegantgrid@gmail.com</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">We reply within 24 hours</p>
+              </div>
             </div>
 
-            <div
-              style="background: rgba(245, 165, 36, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(245, 165, 36, 0.2);">
-              <h4 style="color: var(--primary-strong); margin: 0 0 0.75rem;">💯 Our Promise</h4>
-              <p style="margin: 0; line-height: 1.7;">
+            <!-- Availability -->
+            <div class="contact-method">
+              <div class="icon">⏰</div>
+              <div class="details">
+                <h4>Availability</h4>
+                <p><strong style="color: var(--accent);">24/7</strong> — We're always here for you!</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">No waiting, instant responses</p>
+              </div>
+            </div>
+
+            <!-- Promise Box -->
+            <div class="promise-box">
+              <h4>💯 Our Promise</h4>
+              <p>
                 CV එක සම්පූර්නෙන් හදල ඔයාට OK වෙනකන් මුදල් ගෙවීම අවශ්ය වෙන්නෙ නෑ.
                 <br><br>
-                <em>No payment until you're completely satisfied!</em>
+                <strong>No payment until you're 100% satisfied!</strong>
               </p>
             </div>
           </article>
+
+          <!-- Quick Contact Form / FAQ -->
+          <article class="contact-panel">
+            <h3>💡 Quick Questions?</h3>
+
+            <p style="margin-bottom: 2rem; line-height: 1.8;">
+              Don't know which package to choose? Not sure about pricing?
+              Just have a general question? <strong>We're here to help!</strong>
+            </p>
+
+            <!-- Quick WhatsApp Options -->
+            <div style="display: grid; gap: 1rem;">
+              <a class="button whatsapp-btn"
+                href="https://wa.me/94756557838?text=Hey%2C%20I%20need%20help%20choosing%20the%20right%20package%20for%20me%20%F0%9F%A4%94"
+                target="_blank" style="text-align: left; justify-content: flex-start;">
+                💬 I need help choosing a package
+              </a>
+              <a class="button whatsapp-btn"
+                href="https://wa.me/94756557838?text=Hey%2C%20I%20have%20a%20question%20about%20pricing%20%F0%9F%92%B0"
+                target="_blank" style="text-align: left; justify-content: flex-start;">
+                💬 I have a question about pricing
+              </a>
+              <a class="button whatsapp-btn"
+                href="https://wa.me/94756557838?text=Hey%2C%20I%20want%20to%20see%20some%20sample%20CVs%20%F0%9F%93%84"
+                target="_blank" style="text-align: left; justify-content: flex-start;">
+                💬 I want to see sample CVs
+              </a>
+              <a class="button whatsapp-btn"
+                href="https://wa.me/94756557838?text=Hey%2C%20I%20need%20a%20custom%20package%20%F0%9F%8E%AF"
+                target="_blank" style="text-align: left; justify-content: flex-start;">
+                💬 I need a custom package
+              </a>
+              <a class="button whatsapp-btn"
+                href="https://wa.me/94756557838?text=Hey%2C%20I%20have%20a%20general%20question%20%E2%9C%8B"
+                target="_blank" style="text-align: left; justify-content: flex-start;">
+                💬 I have a general question
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">🌐 Find Us Online</h4>
+            <div class="social-links">
+              <a class="social-link" href="https://wa.me/94756557838" target="_blank">💬 WhatsApp</a>
+              <a class="social-link" href="#" target="_blank">📘 Facebook</a>
+              <a class="social-link" href="#" target="_blank">📸 Instagram</a>
+              <a class="social-link" href="#" target="_blank">💼 LinkedIn</a>
+            </div>
+
+            <!-- Sinhala Message -->
+            <div
+              style="margin-top: 2rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px;">
+              <p style="margin: 0; text-align: center; line-height: 1.9;">
+                🇱🇰 <strong>සිංහලෙන් කතා කරන්න පුලුවන්!</strong>
+                <br><br>
+                අපේ ඉන්නෙ හරිම friendly කට්ටියක්. ඕන දෙයක් අහන්න පැකිලෙන්න එපා!
+                <br><br>
+                <em>අපිට ඕනේ CV එක අරන් යද්දි ඔයා සතුටින් යන්න විතරයි 🤗</em>
+              </p>
+            </div>
+          </article>
+
         </div>
       </section>
 
+      <!-- Why Contact Us -->
       <section class="section">
         <div class="section-title">
           <h2>Why People Love Working With Us</h2>
@@ -139,20 +308,30 @@
           </article>
         </div>
       </section>
+
+      <!-- Final CTA -->
+      <section class="section">
+        <div class="section-grid">
+          <article class="contact-panel" style="text-align: center;">
+            <h3>🚀 Ready to Start Your Career Transformation?</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2rem;">
+              එහෙනම් අපි වැඩේ පටං ගමු! Let's create something amazing together.
+              Your success story starts with a simple message.
+            </p>
+            <a class="button whatsapp-btn"
+              href="https://wa.me/94756557838?text=Hi%20The%20Elegant%20Grid!%20%F0%9F%91%8B%20I%27m%20ready%20to%20start%20my%20career%20transformation!"
+              target="_blank" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">
+              💬 Let's Get Started!
+            </a>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 The Elegant Grid — Premium CV Design Service | Available 24/7 🙏</p>
+      <p>© 2026 The Elegant Grid — Premium CV Design Service | 📱 +94 75 655 7838 | Available 24/7 🙏</p>
     </footer>
   </div>
-
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      this.reset();
-      alert('Message received! 🙏\n\nඅපි ඉක්මනින්ම ඔයාට reply කරන්නම්!\nWe will get back to you very soon!');
-    });
-  </script>
 </body>
 
 </html>
