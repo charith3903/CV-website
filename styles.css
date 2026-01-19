@@ -977,17 +977,11 @@ select option {
 
 /* ===== FOOTER ===== */
 .footer {
-  padding: 3rem clamp(1.5rem, 4vw, 5rem);
-  text-align: center;
+  margin-top: auto;
+  padding: 0;
   border-top: 1px solid var(--border-subtle);
-  color: var(--text-subtle);
-  font-size: 0.9rem;
   position: relative;
-
-  /* Subtle gradient top border */
-  background: linear-gradient(to bottom,
-      rgba(245, 165, 36, 0.03),
-      transparent 30%);
+  background: linear-gradient(to bottom, rgba(245, 165, 36, 0.03), rgba(3, 4, 10, 0.95));
 }
 
 .footer::before {
@@ -996,24 +990,173 @@ select option {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--accent), var(--primary), transparent);
 }
 
-.footer p {
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  padding: 4rem clamp(1.5rem, 5vw, 5rem);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  transition: all var(--transition-smooth);
+}
+
+.footer-logo:hover {
+  transform: translateX(5px);
+}
+
+.footer-logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(245, 165, 36, 0.3);
+}
+
+.footer-logo span {
+  background: linear-gradient(135deg, var(--primary-strong), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: all var(--transition-smooth);
+}
+
+.social-icon:hover {
+  background: rgba(245, 165, 36, 0.15);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(245, 165, 36, 0.2);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.footer a {
-  color: var(--accent);
-  font-weight: 500;
-  transition: color var(--transition-fast);
+.footer-links li a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
 }
 
-.footer a:hover {
+.footer-links li a:hover {
   color: var(--primary-strong);
-  text-shadow: 0 0 10px var(--accent-glow);
+  padding-left: 0.5rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.contact-item a {
+  color: var(--accent);
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: all var(--transition-smooth);
+}
+
+.footer-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem clamp(1.5rem, 5vw, 5rem);
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--text-subtle);
+  font-size: 0.85rem;
+}
+
+.footer-promises {
+  color: var(--text-muted) !important;
+  font-size: 0.8rem !important;
 }
 
 /* ===== RESPONSIVE STYLES ===== */
