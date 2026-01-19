@@ -1,5 +1,6 @@
 /* ============================================
    UNIVERSE BACKGROUND - STARS & COMETS
+   All elements are WHITE only
    ============================================ */
 
 /* Star container */
@@ -14,7 +15,7 @@
     overflow: hidden;
 }
 
-/* Individual stars */
+/* Individual stars - ALL WHITE */
 .star {
     position: absolute;
     background: white;
@@ -40,23 +41,15 @@
 .star.large {
     width: 4px;
     height: 4px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(245, 165, 36, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Colored stars */
-.star.gold {
-    background: #f5a524;
-    box-shadow: 0 0 8px rgba(245, 165, 36, 0.8);
-}
-
-.star.teal {
-    background: #4be0d0;
-    box-shadow: 0 0 8px rgba(75, 224, 208, 0.8);
-}
-
+/* Override colored stars - make all white */
+.star.gold,
+.star.teal,
 .star.purple {
-    background: #8b5cf6;
-    box-shadow: 0 0 8px rgba(139, 92, 246, 0.8);
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 /* Twinkle animation */
@@ -74,19 +67,19 @@
     }
 }
 
-/* Comet */
+/* Comet - WHITE */
 .comet {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: linear-gradient(45deg, #fff, #f5a524);
+    background: white;
     border-radius: 50%;
-    box-shadow: 0 0 10px #fff, 0 0 20px #f5a524, 0 0 30px #f5a524;
+    box-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
     animation: comet-fly var(--comet-duration) linear infinite;
     opacity: 0;
 }
 
-/* Comet tail */
+/* Comet tail - WHITE */
 .comet::before {
     content: '';
     position: absolute;
@@ -94,7 +87,7 @@
     right: 4px;
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(245, 165, 36, 0.8), rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3), transparent);
     transform: translateY(-50%);
     border-radius: 2px;
 }
@@ -131,14 +124,14 @@
     }
 }
 
-/* Shooting star */
+/* Shooting star - WHITE */
 .shooting-star {
     position: absolute;
     width: 3px;
     height: 3px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 6px #fff, 0 0 12px rgba(75, 224, 208, 0.5);
+    box-shadow: 0 0 6px #fff, 0 0 12px rgba(255, 255, 255, 0.6);
     animation: shoot var(--shoot-duration) ease-out infinite;
     opacity: 0;
 }
@@ -175,7 +168,7 @@
     }
 }
 
-/* Floating particles */
+/* Floating particles - WHITE */
 .particle {
     position: absolute;
     width: 2px;

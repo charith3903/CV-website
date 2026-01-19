@@ -671,7 +671,7 @@ main {
   overflow: hidden;
 }
 
-/* Animated gradient border on hover */
+/* Animated gold border on hover */
 .highlight-card::before,
 .service-card::before,
 .package-card::before,
@@ -681,10 +681,10 @@ main {
   inset: -2px;
   border-radius: 26px;
   background: linear-gradient(135deg,
-      var(--primary),
-      var(--accent),
-      var(--accent-secondary),
-      var(--primary));
+      #f5a524,
+      #ffd700,
+      #f4bf5b,
+      #f5a524);
   background-size: 300% 300%;
   z-index: -1;
   opacity: 0;
@@ -692,17 +692,17 @@ main {
   animation: gradient-shift 4s ease infinite;
 }
 
-/* Card hover effects */
+/* Card hover effects - Gold outline only, no background change */
 .highlight-card:hover,
 .service-card:hover,
 .package-card:hover,
 .case-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  border-color: transparent;
+  transform: translateY(-5px);
+  border-color: rgba(245, 165, 36, 0.6);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 20px 50px rgba(0, 0, 0, 0.3),
-    0 0 40px var(--primary-glow);
+    0 0 0 2px rgba(245, 165, 36, 0.4),
+    0 0 30px rgba(245, 165, 36, 0.2),
+    0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .highlight-card:hover::before,
