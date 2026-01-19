@@ -1,83 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Packages</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <div class="site-brand">CV Craft Studio</div>
-        <nav class="nav-links">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About Us</a>
-          <a class="nav-link" href="our-service.html">Our Service</a>
-          <a class="nav-link active" href="our-packages.html">Our Packages</a>
-          <a class="nav-link" href="our-work.html">Our Work</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-        </nav>
-      </header>
 
-      <main>
-        <section class="hero">
-          <p class="hero__eyebrow">Choose a path</p>
-          <h1>Packages that match your launch pace—light refresh to full concierge.</h1>
-          <p>
-            Every package bundles discovery, written assets, and a launch plan that keeps hiring managers curious.
-          </p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Packages - The Elegant Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .package-category {
+      margin-bottom: 4rem;
+    }
 
-        <section class="section">
-          <div class="section-title">
-            <h2>Package options</h2>
-            <p>Dates, deliverables, and milestones are spelled out from day one.</p>
+    .package-category-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .package-category-title h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: var(--text-primary);
+    }
+
+    .package-category-title .icon {
+      font-size: 2rem;
+    }
+
+    .package-card .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+
+    .package-card .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #2ed573);
+      color: var(--bg-dark);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin-left: 0.5rem;
+    }
+
+    .package-card.featured {
+      border: 2px solid var(--primary);
+      position: relative;
+    }
+
+    .package-card.featured::after {
+      content: '⭐ POPULAR';
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--primary);
+      color: var(--bg-dark);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .delivery-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .ats-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    .combo-highlight {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    .savings-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #f39c12, #e67e22);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .special-feature {
+      background: linear-gradient(135deg, rgba(75, 224, 208, 0.15), rgba(75, 224, 208, 0.05));
+      border: 1px solid rgba(75, 224, 208, 0.3);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="site-brand">The Elegant Grid</div>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="our-service.html">Our Service</a>
+        <a class="nav-link active" href="our-packages.html">Our Packages</a>
+        <a class="nav-link" href="our-work.html">Our Work</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="hero__eyebrow">Choose Your Path</p>
+        <h1>Packages For Every Career Stage & Budget.</h1>
+        <p>
+          From students to executives — we have the perfect package for you.
+          Remember: unlimited revisions and pay only when 100% satisfied!
+        </p>
+      </section>
+
+      <!-- CV PACKAGES -->
+      <section class="section">
+        <div class="package-category">
+          <div class="package-category-title">
+            <span class="icon">📄</span>
+            <h3>CV Packages</h3>
           </div>
           <div class="section-grid">
-            <article class="package-card">
-              <h3>Launch Sprint</h3>
-              <p>Perfect for professionals who want a modern CV site + LinkedIn refresh in one focused week.</p>
-              <ul>
-                <li>5-day build with two revisions</li>
-                <li>CV website + downloadable PDF</li>
-                <li>LinkedIn headline + About polish</li>
-              </ul>
-              <p><strong>Starting at $1,800</strong></p>
-            </article>
-            <article class="package-card">
-              <h3>Concierge Suite</h3>
-              <p>All systems go: CV site, LinkedIn overhaul, and optimizer toolkit with coaching.</p>
-              <ul>
-                <li>Full CV site + proof modules</li>
-                <li>Profile storycraft, recommendations, and content plan</li>
-                <li>Launch assets + follow-up templates</li>
-              </ul>
-              <p><strong>Starting at $3,400</strong></p>
-            </article>
-            <article class="package-card">
-              <h3>Optimizer Retainer</h3>
-              <p>A quarterly partnership focused on staying in front of recruiters and keeping your brand fresh.</p>
-              <ul>
-                <li>Monthly diagnostics &amp; reports</li>
-                <li>LinkedIn + CV sync checklist</li>
-                <li>Content prompts + engagement report</li>
-              </ul>
-              <p><strong>From $950 / month</strong></p>
-            </article>
-          </div>
-        </section>
-      </main>
 
-      <footer class="footer">
-        <p>© 2026 CV Craft Studio — Packages built for decisive professionals.</p>
-      </footer>
-    </div>
-  </body>
+            <!-- Starter CV -->
+            <article class="package-card">
+              <h3>Starter CV</h3>
+              <span class="price-tag">Rs. 500</span>
+              <p>A simple one-page CV designed for students and first-time job seekers.</p>
+              <ul>
+                <li>Company Analysis</li>
+                <li>Job Description Analysis</li>
+                <li>Formatted CV in PDF</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 1 day</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Professional CV -->
+            <article class="package-card featured">
+              <h3>Professional CV</h3>
+              <span class="price-tag">Rs. 700</span>
+              <p>A two-page CV ideal for entry-level professionals and job switchers.</p>
+              <ul>
+                <li>Company Analysis</li>
+                <li>Job Description Analysis</li>
+                <li>Keyword Research</li>
+                <li>Free Professional Cover Letter</li>
+                <li>Formatted CV in PDF</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 1 day</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Lifetime Editable CV - NEW! -->
+            <article class="package-card">
+              <h3>Lifetime Editable CV <span class="badge">NEW</span></h3>
+              <span class="price-tag">Rs. 1,000</span>
+              <p>"One link. Lifetime access. Unlimited edits." — Lifetime Editable CV & Cover Letter</p>
+              <ul>
+                <li>Company Analysis</li>
+                <li>Job Description Analysis</li>
+                <li>Keyword Research (ATS & HR-optimized)</li>
+                <li>Free Professional Cover Letter (Editable)</li>
+                <li>Formatted CV in PDF and Lifetime Editable Link</li>
+              </ul>
+              <div class="special-feature">
+                💡 "We provide permanent editable links for your CV and Cover Letter so you can make updates instantly
+                and download the latest versions anytime."
+              </div>
+              <div class="delivery-time">⚡ Delivery within 1 day</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Global ATS CV -->
+            <article class="package-card">
+              <h3>Global ATS CV</h3>
+              <span class="price-tag">Rs. 2,000</span>
+              <p>ATS-friendly and region-specific CVs tailored for US, UK, Gulf, and more.</p>
+              <ul>
+                <li>Company Analysis</li>
+                <li>Job Description Analysis</li>
+                <li>Keyword Research (ATS & HR-optimized)</li>
+                <li>Free Professional Cover Letter (Editable)</li>
+                <li>Formatted CV in PDF + Word</li>
+              </ul>
+              <div class="ats-badge">✓ ATS Score 75+</div>
+              <div class="delivery-time">⚡ Delivery within 2 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Premium International CV -->
+            <article class="package-card">
+              <h3>Premium International CV <span class="badge">Executive</span></h3>
+              <span class="price-tag">Rs. 3,000</span>
+              <p>A branded, high-level CV tailored for senior professionals, executives, or those applying for
+                competitive roles overseas. Includes deep industry and company research, expert advice, and one free CV
+                update within 6 months.</p>
+              <ul>
+                <li>Company Analysis (we study your target employer and industry trends)</li>
+                <li>Job Description Analysis (custom CV targeting the specific role)</li>
+                <li>Keyword Research (optimized for global ATS systems like Workday, Taleo, etc.)</li>
+                <li>Free Professional Cover Letter (matched to job and region)</li>
+                <li>Formatted CV in PDF + Editable Word</li>
+                <li>Career summary writing + impact-focused achievements</li>
+                <li>1x Free CV Update Lifetime</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 2-5 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LINKEDIN PACKAGES -->
+      <section class="section">
+        <div class="package-category">
+          <div class="package-category-title">
+            <span class="icon">💼</span>
+            <h3>LinkedIn Packages</h3>
+          </div>
+          <div class="section-grid">
+
+            <!-- Basic LinkedIn -->
+            <article class="package-card">
+              <h3>Basic LinkedIn Profile</h3>
+              <span class="price-tag">Rs. 1,000</span>
+              <p>Builds a simple but professional LinkedIn profile that improves your visibility to recruiters and HR
+                professionals.</p>
+              <ul>
+                <li>Headline Writing (industry-relevant and eye-catching)</li>
+                <li>Summary Section (short, professional intro)</li>
+                <li>Experience Formatting (aligned with your CV)</li>
+                <li>Skill Section Setup</li>
+                <li>Basic Keyword Optimization for LinkedIn Search</li>
+                <li>Profile Visibility Settings Guidance</li>
+                <li>Profile Photo Advice (what type of image works best)</li>
+                <li>Free Cover Photo Template</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 2-3 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Enhanced LinkedIn -->
+            <article class="package-card featured">
+              <h3>Enhanced LinkedIn Profile</h3>
+              <span class="price-tag">Rs. 1,500</span>
+              <p>A professionally written LinkedIn profile with keyword optimization to help you stand out and rank in
+                searches.</p>
+              <ul>
+                <li>Complete Profile Writing (Headline, About, Experience, Skills, Projects)</li>
+                <li>Keyword Research for Industry & Role</li>
+                <li>Custom Banner Design (1 cover photo matching your career field)</li>
+                <li>Professional Profile Picture Guidelines (pose, attire, background)</li>
+                <li>Endorsement Strategy (guide to get skills endorsed)</li>
+                <li>Profile Optimization for Recruiter Search Filters</li>
+                <li>Privacy & Notification Settings Guidance</li>
+                <li>All-In-One Gift Bundle</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 2-3 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Premium LinkedIn -->
+            <article class="package-card">
+              <h3>Premium LinkedIn Profile <span class="badge">Full Branding</span></h3>
+              <span class="price-tag">Rs. 2,500</span>
+              <p>A full LinkedIn branding makeover with strategic positioning, networking tips, and post visibility
+                strategy.</p>
+              <ul>
+                <li>Full Profile Revamp (Every section rewritten professionally)</li>
+                <li>Career Branding Strategy (you become a recognized expert)</li>
+                <li>Hashtag Strategy for Organic Reach</li>
+                <li>Post Types & Content Plan Suggestions</li>
+                <li>Optimized "Open to Work" Setup & Recruiter Settings</li>
+                <li>Headline Formulas Based on Career Stage</li>
+                <li>Guide to Increasing Profile Views & Connections</li>
+                <li>Professional Profile Picture Review & Enhancement</li>
+                <li>Premium Cover Photo + 1 Bonus Design (Fully Custom)</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 3-5 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO WEBSITE PACKAGES -->
+      <section class="section">
+        <div class="package-category">
+          <div class="package-category-title">
+            <span class="icon">🌐</span>
+            <h3>Portfolio Website Packages</h3>
+          </div>
+          <div class="section-grid">
+
+            <!-- Basic Portfolio -->
+            <article class="package-card">
+              <h3>Basic Portfolio Site</h3>
+              <span class="price-tag">Rs. 2,500</span>
+              <p>A clean, single-page portfolio website to showcase your work online.</p>
+              <ul>
+                <li>Single Page Design (About, Skills, Projects, Contact)</li>
+                <li>Mobile Responsive Layout</li>
+                <li>Up to 5 Project Showcases</li>
+                <li>Contact Form Integration</li>
+                <li>Social Media Links</li>
+                <li>Free Hosting Setup Guidance</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 3-5 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Professional Portfolio -->
+            <article class="package-card featured">
+              <h3>Professional Portfolio Site</h3>
+              <span class="price-tag">Rs. 5,000</span>
+              <p>A multi-page portfolio website with modern animations and premium design.</p>
+              <ul>
+                <li>Multi-Page Design (Home, About, Portfolio, Services, Contact)</li>
+                <li>Premium Modern Animations</li>
+                <li>Up to 10 Project Showcases with Detailed Case Studies</li>
+                <li>Testimonials Section</li>
+                <li>Blog/Articles Section (optional)</li>
+                <li>SEO Optimization</li>
+                <li>Google Analytics Setup</li>
+                <li>1 Month Free Support</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 5-7 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Premium Portfolio -->
+            <article class="package-card">
+              <h3>Premium Portfolio Site <span class="badge">Best Value</span></h3>
+              <span class="price-tag">Rs. 8,000</span>
+              <p>A fully custom, branded portfolio website that positions you as a premium professional.</p>
+              <ul>
+                <li>Fully Custom Design (Unique to Your Brand)</li>
+                <li>Unlimited Pages</li>
+                <li>Advanced Animations & Interactions</li>
+                <li>Project Case Studies with Metrics</li>
+                <li>Custom Domain Setup</li>
+                <li>Professional Email Setup</li>
+                <li>Speed & Performance Optimization</li>
+                <li>3 Months Free Support & Updates</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 7-10 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME/CV WEBSITE PACKAGES -->
+      <section class="section">
+        <div class="package-category">
+          <div class="package-category-title">
+            <span class="icon">💻</span>
+            <h3>Resume Website Packages</h3>
+          </div>
+          <div class="section-grid">
+
+            <!-- Basic Resume Site -->
+            <article class="package-card">
+              <h3>Basic Resume Website</h3>
+              <span class="price-tag">Rs. 1,500</span>
+              <p>A simple online resume/CV that you can share with anyone via a link.</p>
+              <ul>
+                <li>Single Page Online CV</li>
+                <li>Professional Design Template</li>
+                <li>Mobile Responsive</li>
+                <li>PDF Download Button</li>
+                <li>Contact Form</li>
+                <li>Shareable Link</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 2-3 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Professional Resume Site -->
+            <article class="package-card featured">
+              <h3>Professional Resume Website</h3>
+              <span class="price-tag">Rs. 3,500</span>
+              <p>An interactive resume website with animations and multiple sections.</p>
+              <ul>
+                <li>Multi-Section Design (About, Experience, Skills, Education, Contact)</li>
+                <li>Interactive Timeline for Experience</li>
+                <li>Skill Progress Bars/Charts</li>
+                <li>Testimonials Section</li>
+                <li>Project Highlights (up to 5)</li>
+                <li>PDF Download + Print Version</li>
+                <li>SEO Optimized</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 3-5 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+            <!-- Executive Resume Site -->
+            <article class="package-card">
+              <h3>Executive Resume Website <span class="badge">Premium</span></h3>
+              <span class="price-tag">Rs. 6,000</span>
+              <p>A premium branded resume website for executives and senior professionals.</p>
+              <ul>
+                <li>Fully Custom Branded Design</li>
+                <li>Video Introduction Section</li>
+                <li>Detailed Career Timeline</li>
+                <li>Achievement Metrics & KPIs Showcase</li>
+                <li>Media/Publications Section</li>
+                <li>Speaking Engagements</li>
+                <li>Custom Domain Setup</li>
+                <li>LinkedIn Integration</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 5-7 days</div>
+              <a class="button button--ghost" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get
+                Started</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- COMBO PACKAGES -->
+      <section class="section">
+        <div class="package-category">
+          <div class="package-category-title">
+            <span class="icon">🎁</span>
+            <h3>Combo Packages <span class="savings-tag">SAVE MORE!</span></h3>
+          </div>
+          <div class="section-grid">
+
+            <!-- Starter Combo -->
+            <article class="package-card combo-highlight">
+              <h3>Starter Combo</h3>
+              <span class="price-tag">Rs. 1,500</span>
+              <span class="savings-tag">Save Rs. 200!</span>
+              <p>Perfect for students and fresh graduates starting their career journey.</p>
+              <ul>
+                <li>✓ Professional CV (Rs. 700)</li>
+                <li>✓ Basic LinkedIn Profile (Rs. 1,000)</li>
+                <li>✓ Free Cover Letter</li>
+                <li>✓ Priority Support</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 3-4 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+            <!-- Professional Combo -->
+            <article class="package-card combo-highlight featured">
+              <h3>Professional Combo</h3>
+              <span class="price-tag">Rs. 2,200</span>
+              <span class="savings-tag">Save Rs. 300!</span>
+              <p>Complete package for professionals looking to upgrade their entire career presence.</p>
+              <ul>
+                <li>✓ Lifetime Editable CV (Rs. 1,000)</li>
+                <li>✓ Enhanced LinkedIn Profile (Rs. 1,500)</li>
+                <li>✓ Free Cover Letter</li>
+                <li>✓ Interview Tips Guide</li>
+                <li>✓ Priority Support</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 4-5 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+            <!-- Executive Combo -->
+            <article class="package-card combo-highlight">
+              <h3>Executive Combo</h3>
+              <span class="price-tag">Rs. 5,000</span>
+              <span class="savings-tag">Save Rs. 500!</span>
+              <p>Ultimate package for executives and senior professionals going global.</p>
+              <ul>
+                <li>✓ Premium International CV (Rs. 3,000)</li>
+                <li>✓ Premium LinkedIn Profile (Rs. 2,500)</li>
+                <li>✓ Professional Cover Letter</li>
+                <li>✓ 1x Free CV Update Lifetime</li>
+                <li>✓ Career Consultation Call</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 5-7 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+            <!-- Digital Presence Combo -->
+            <article class="package-card combo-highlight">
+              <h3>Digital Presence Combo</h3>
+              <span class="price-tag">Rs. 4,500</span>
+              <span class="savings-tag">Save Rs. 500!</span>
+              <p>CV + LinkedIn + Resume Website — Complete online presence package.</p>
+              <ul>
+                <li>✓ Global ATS CV (Rs. 2,000)</li>
+                <li>✓ Enhanced LinkedIn Profile (Rs. 1,500)</li>
+                <li>✓ Basic Resume Website (Rs. 1,500)</li>
+                <li>✓ Unified Branding Across All</li>
+                <li>✓ Free Cover Letter</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 5-7 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+            <!-- Full Brand Package -->
+            <article class="package-card combo-highlight">
+              <h3>Full Brand Package <span class="badge">Ultimate</span></h3>
+              <span class="price-tag">Rs. 12,000</span>
+              <span class="savings-tag">Save Rs. 2,500!</span>
+              <p>Everything you need for a complete professional brand — ideal for executives & entrepreneurs.</p>
+              <ul>
+                <li>✓ Premium International CV (Rs. 3,000)</li>
+                <li>✓ Premium LinkedIn Profile (Rs. 2,500)</li>
+                <li>✓ Professional Portfolio Website (Rs. 5,000)</li>
+                <li>✓ Professional Resume Website (Rs. 3,500)</li>
+                <li>✓ Custom Domain Setup</li>
+                <li>✓ 3 Months Free Support</li>
+                <li>✓ Lifetime CV Updates</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 10-14 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+            <!-- Creative Combo -->
+            <article class="package-card combo-highlight">
+              <h3>Creative Professional Combo</h3>
+              <span class="price-tag">Rs. 7,500</span>
+              <span class="savings-tag">Save Rs. 1,000!</span>
+              <p>Perfect for designers, developers, and creative professionals who need a stunning portfolio.</p>
+              <ul>
+                <li>✓ Lifetime Editable CV (Rs. 1,000)</li>
+                <li>✓ Enhanced LinkedIn Profile (Rs. 1,500)</li>
+                <li>✓ Professional Portfolio Website (Rs. 5,000)</li>
+                <li>✓ Up to 10 Project Case Studies</li>
+                <li>✓ Custom Branding</li>
+              </ul>
+              <div class="delivery-time">⚡ Delivery within 7-10 days</div>
+              <a class="button" href="contact.html" style="margin-top: 1.5rem; display: inline-block;">Get This Deal</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- GUARANTEES SECTION -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Every Package Includes</h2>
+          <p>සෑම package එකකම මේවා අඩංගුයි!</p>
+        </div>
+        <div class="section-grid highlight-grid">
+          <article class="highlight-card">
+            <div>
+              <h3>🔄 Unlimited Revisions</h3>
+              <p>ඔයාට ඕන පාරක් වෙනස් කරන්න පුලුවන්. Change until you're 100% satisfied!</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>💳 Pay When Satisfied</h3>
+              <p>OK වෙනකන් මුදල් ගෙවන්න ඕනෙ නෑ. No payment until you love it!</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>📞 24/7 Available</h3>
+              <p>ඕන වෙලාවක Call/msg කරන්න. We're always here for you!</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>🤝 Friendly Team</h3>
+              <p>අපේ ඉන්නෙ හරිම friendly කට්ටියක්. Feel free to ask anything!</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="section">
+        <div class="section-grid">
+          <article class="contact-panel" style="text-align: center;">
+            <h3>Not Sure Which Package? / ඕන එක තෝරගන්න බැරිද?</h3>
+            <p>
+              Don't worry! Message us and we'll recommend the perfect package for your career goals and budget.
+              <br>
+              <em>කරදර වෙන්න එපා! අපිට msg එකක් දාන්න, ඔයාට හොඳම එක කියනවා!</em>
+            </p>
+            <div class="hero__actions" style="justify-content: center; margin-top: 1.5rem;">
+              <a class="button" href="contact.html">Let's Discuss / කතා කරමු</a>
+              <a class="button button--ghost" href="our-work.html">See Our Work First</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 The Elegant Grid — Premium CV, LinkedIn & Portfolio Design Service | Available 24/7 🙏</p>
+    </footer>
+  </div>
+</body>
+
 </html>

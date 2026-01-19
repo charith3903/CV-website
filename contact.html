@@ -1,89 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <div class="site-brand">CV Craft Studio</div>
-        <nav class="nav-links">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About Us</a>
-          <a class="nav-link" href="our-service.html">Our Service</a>
-          <a class="nav-link" href="our-packages.html">Our Packages</a>
-          <a class="nav-link" href="our-work.html">Our Work</a>
-          <a class="nav-link active" href="contact.html">Contact</a>
-        </nav>
-      </header>
 
-      <main>
-        <section class="hero">
-          <p class="hero__eyebrow">Book time</p>
-          <h1>Tell me about the next role and I will build your digital story.</h1>
-          <p>
-            I reply within one business day. We can sketch your scope, timeline, and preferred package before the call.
-          </p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - The Elegant Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-        <section class="section">
-          <div class="section-grid">
-            <article class="contact-panel">
-              <form id="contact-form">
-                <label>
-                  Name
-                  <input type="text" name="name" required placeholder="Jordan Kim" />
-                </label>
-                <label>
-                  Email
-                  <input type="email" name="email" required placeholder="you@email.com" />
-                </label>
-                <label>
-                  Focus area
-                  <select name="focus">
-                    <option value="cv">CV Site</option>
-                    <option value="linkedin">LinkedIn</option>
-                    <option value="packages">Service + Packages</option>
-                    <option value="optimizer">Optimizer Retainer</option>
-                  </select>
-                </label>
-                <label>
-                  Timeline &amp; goals
-                  <textarea name="message" rows="3" placeholder="Tell me about your next step" required></textarea>
-                </label>
-                <button type="submit" class="button">Send request</button>
-              </form>
-            </article>
-            <article class="contact-panel">
-              <h3>Studio details</h3>
-              <p>Email me at <a href="mailto:hello@cvcraft.studio">hello@cvcraft.studio</a> or reply via LinkedIn.</p>
-              <p>Enough bandwidth for two intense launches per month—grab your preferred slot quickly.</p>
-              <p>Need an invoice? Reply with the scope and I will share the paperwork within one business day.</p>
-            </article>
-          </div>
-        </section>
-      </main>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="site-brand">The Elegant Grid</div>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="our-service.html">Our Service</a>
+        <a class="nav-link" href="our-packages.html">Our Packages</a>
+        <a class="nav-link" href="our-work.html">Our Work</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-      <footer class="footer">
-        <p>© 2026 CV Craft Studio — Conversations that lead to decisive launches.</p>
-      </footer>
-    </div>
+    <main>
+      <section class="hero">
+        <p class="hero__eyebrow">Let's Connect</p>
+        <h1>We're Here 24/7 — Ready to Help You Shine.</h1>
+        <p>
+          ඕන වෙලාවක Call කරන්න msg කරන්න. We're available around the clock to discuss
+          your CV needs. No pressure, no commitment — just a friendly conversation about your career goals.
+        </p>
+      </section>
 
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        this.reset();
-        alert('Request received. Expect a reply within one business day.');
-      });
-    </script>
-  </body>
+      <section class="section">
+        <div class="section-grid">
+          <article class="contact-panel">
+            <h3>Send Us a Message</h3>
+            <form id="contact-form">
+              <label>
+                Your Name / ඔයාගෙ නම
+                <input type="text" name="name" required placeholder="Enter your name" />
+              </label>
+              <label>
+                Email / ඊමේල්
+                <input type="email" name="email" required placeholder="you@email.com" />
+              </label>
+              <label>
+                Phone / දුරකතන අංකය
+                <input type="tel" name="phone" placeholder="+94 XX XXX XXXX" />
+              </label>
+              <label>
+                What do you need? / ඔයාට මොනවද ඕනේ?
+                <select name="focus">
+                  <option value="cv">Professional CV</option>
+                  <option value="cv-linkedin">CV + LinkedIn</option>
+                  <option value="full-package">Complete Package</option>
+                  <option value="other">Other / Custom</option>
+                </select>
+              </label>
+              <label>
+                Tell us about your goals / ඔයාගෙ අරමුණ
+                <textarea name="message" rows="4"
+                  placeholder="Tell us about your career goals, target position, and anything else you'd like us to know..."
+                  required></textarea>
+              </label>
+              <button type="submit" class="button">Send Message / යවන්න</button>
+            </form>
+          </article>
+          <article class="contact-panel">
+            <h3>📱 Get in Touch Directly</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+              <strong>අපේ ඉන්නෙ හරිම friendly කට්ටියක්!</strong>
+              <br>
+              Feel free to reach out through any channel you prefer.
+            </p>
+
+            <div style="margin-bottom: 2rem;">
+              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">📧 Email</h4>
+              <p><a href="mailto:hello@theelegantgrid.com">hello@theelegantgrid.com</a></p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">💬 WhatsApp / Viber</h4>
+              <p>Message us anytime — we respond fast!</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h4 style="color: var(--primary-strong); margin-bottom: 0.75rem;">⏰ Availability</h4>
+              <p><strong>24/7</strong> — We're always here for you!</p>
+            </div>
+
+            <div
+              style="background: rgba(245, 165, 36, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(245, 165, 36, 0.2);">
+              <h4 style="color: var(--primary-strong); margin: 0 0 0.75rem;">💯 Our Promise</h4>
+              <p style="margin: 0; line-height: 1.7;">
+                CV එක සම්පූර්නෙන් හදල ඔයාට OK වෙනකන් මුදල් ගෙවීම අවශ්ය වෙන්නෙ නෑ.
+                <br><br>
+                <em>No payment until you're completely satisfied!</em>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Why People Love Working With Us</h2>
+          <p>ඔබේ සතුටු අපේ සාර්ථකත්වයයි!</p>
+        </div>
+        <div class="section-grid highlight-grid">
+          <article class="highlight-card">
+            <div>
+              <h3>🔄 Unlimited Changes</h3>
+              <p>ඔයාට ඕන පාරක් CV එක වෙනස් කරන්න පුලුවන්. No limits, no extra charges!</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>🤝 Collaborative</h3>
+              <p>We work together, not just for you. Your input shapes every detail.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>😊 Friendly Team</h3>
+              <p>No pressure, no judgment. Just friendly professionals here to help!</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div>
+              <h3>🎯 Results Focused</h3>
+              <p>We write ATS-optimized content to get you into the top 10 candidates.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 The Elegant Grid — Premium CV Design Service | Available 24/7 🙏</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      this.reset();
+      alert('Message received! 🙏\n\nඅපි ඉක්මනින්ම ඔයාට reply කරන්නම්!\nWe will get back to you very soon!');
+    });
+  </script>
+</body>
+
 </html>
