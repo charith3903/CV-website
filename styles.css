@@ -324,13 +324,31 @@ a:hover {
 }
 
 .site-brand span {
-  /* Gradient text effect */
-  background: linear-gradient(135deg, var(--primary-strong), var(--accent), var(--primary));
-  background-size: 200% 200%;
+  /* Gold shining text effect */
+  background: linear-gradient(90deg,
+      #f5a524 0%,
+      #ffd700 20%,
+      #fff8dc 40%,
+      #ffd700 60%,
+      #f5a524 80%,
+      #f4bf5b 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 4s ease infinite;
+  animation: gold-shine 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(245, 165, 36, 0.3);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+}
+
+@keyframes gold-shine {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
 }
 
 .site-logo {
