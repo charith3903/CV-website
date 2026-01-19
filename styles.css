@@ -837,6 +837,7 @@ main {
   z-index: 1;
   opacity: 0;
   transition: opacity var(--transition-smooth);
+  pointer-events: none;
 }
 
 /* Card hover effects - Darker card + shining gold outline */
