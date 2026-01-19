@@ -32,13 +32,47 @@
 
     <main>
       <section class="hero">
-        <p class="hero__eyebrow">Premium CV Design Studio</p>
-        <h1>We Create CVs Together With You — Your Success is Our Goal.</h1>
-        <p>
-          Welcome to The Elegant Grid! We do things differently. We collaborate with you every step
-          of the way to create a CV that truly represents you. Available 24/7, unlimited revisions,
-          and you only pay when you're 100% satisfied.
+        <p class="hero__eyebrow">✨ Premium CV Design Studio ✨</p>
+
+        <!-- Animated Feature Badges -->
+        <div class="hero__badges">
+          <span class="hero-badge hero-badge--free">🎁 FREE Cover Letter</span>
+          <span class="hero-badge hero-badge--lifetime">🔗 Lifetime Editable Link</span>
+        </div>
+
+        <h1>We Create
+          <span class="text-rotator">
+            <span class="text-rotator__word">Professional CVs</span>
+            <span class="text-rotator__word">ATS-Optimized CVs</span>
+            <span class="text-rotator__word">Interview-Winning CVs</span>
+            <span class="text-rotator__word">LinkedIn Profiles</span>
+            <span class="text-rotator__word">Portfolio Websites</span>
+          </span>
+          <br>Together With You!
+        </h1>
+
+        <p class="hero__subtitle">
+          Your Success is Our Goal 🎯 — Available 24/7, Unlimited Revisions, Pay When 100% Satisfied!
         </p>
+
+        <!-- Key Features Highlight -->
+        <div class="hero__features">
+          <div class="feature-highlight">
+            <span class="feature-icon">🎁</span>
+            <div>
+              <strong>FREE Cover Letter</strong>
+              <small>Included with every CV package!</small>
+            </div>
+          </div>
+          <div class="feature-highlight">
+            <span class="feature-icon">🔗</span>
+            <div>
+              <strong>Lifetime Editable Link</strong>
+              <small>Edit & download anytime, forever!</small>
+            </div>
+          </div>
+        </div>
+
         <div class="hero__actions">
           <a class="button" href="our-packages.html">View Packages</a>
           <a class="button"
@@ -211,6 +245,41 @@
     </footer>
   </div>
   <script src="universe.js"></script>
+  <script>
+    // Text Rotator Animation
+    (function () {
+      const rotator = document.querySelector('.text-rotator');
+      if (!rotator) return;
+
+      const words = rotator.querySelectorAll('.text-rotator__word');
+      if (words.length === 0) return;
+
+      let currentIndex = 0;
+
+      // Initialize first word
+      words[0].classList.add('active');
+
+      function rotateWords() {
+        const current = words[currentIndex];
+        const nextIndex = (currentIndex + 1) % words.length;
+        const next = words[nextIndex];
+
+        // Exit current word
+        current.classList.remove('active');
+        current.classList.add('exit');
+
+        // After exit animation, show next word
+        setTimeout(() => {
+          current.classList.remove('exit');
+          next.classList.add('active');
+          currentIndex = nextIndex;
+        }, 500);
+      }
+
+      // Rotate every 3 seconds
+      setInterval(rotateWords, 3000);
+    })();
+  </script>
 </body>
 
 </html>
