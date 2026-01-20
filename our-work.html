@@ -47,14 +47,6 @@
           <p>Browse through our collection of professionally designed CVs across various industries.</p>
         </div>
 
-        <!-- Category Filter Tabs -->
-        <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">All CVs</button>
-          <button class="filter-btn" data-filter="professional">Professional</button>
-          <button class="filter-btn" data-filter="ats">ATS Optimized</button>
-          <button class="filter-btn" data-filter="nursing">Healthcare</button>
-          <button class="filter-btn" data-filter="executive">Executive</button>
-        </div>
 
         <!-- Gallery Grid -->
         <div class="cv-gallery">
@@ -578,7 +570,7 @@
   <script src="universe.js"></script>
   <script>
     // Gallery Filter Functionality
-    (function() {
+    (function () {
       const filterBtns = document.querySelectorAll('.filter-btn');
       const cvItems = document.querySelectorAll('.cv-item');
 
@@ -603,7 +595,7 @@
     })();
 
     // Lightbox Functionality
-    (function() {
+    (function () {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const closeBtn = document.getElementById('lightbox-close');
