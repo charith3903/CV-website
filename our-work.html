@@ -40,92 +40,471 @@
         </p>
       </section>
 
-      <section class="section">
+      <!-- CV Gallery Section -->
+      <section class="section cv-gallery-section">
         <div class="section-title">
-          <h2>Success Stories</h2>
-          <p>Real transformations that led to real opportunities.</p>
+          <h2>Our CV Portfolio</h2>
+          <p>Browse through our collection of professionally designed CVs across various industries.</p>
         </div>
-        <div class="section-grid">
-          <article class="case-card">
-            <h3>🎯 Software Engineer</h3>
-            <p>
-              Fresh graduate who needed a CV that would stand out in a competitive tech market.
-              Result: Multiple interview calls within the first week.
-            </p>
-            <ul>
-              <li>ATS-optimized technical CV</li>
-              <li>Project portfolio highlights</li>
-              <li>Skills section optimized for keywords</li>
-              <li>LinkedIn profile aligned with CV</li>
-            </ul>
-          </article>
-          <article class="case-card">
-            <h3>💼 Marketing Manager</h3>
-            <p>
-              Experienced professional transitioning to a senior role.
-              Result: Landed dream job at a multinational company.
-            </p>
-            <ul>
-              <li>Achievement-focused content</li>
-              <li>Metrics and impact highlighted</li>
-              <li>Modern, creative design</li>
-              <li>Executive summary crafted</li>
-            </ul>
-          </article>
-          <article class="case-card">
-            <h3>🏥 Healthcare Professional</h3>
-            <p>
-              Nurse looking to move abroad for better opportunities.
-              Result: Successfully secured position in the Middle East.
-            </p>
-            <ul>
-              <li>International format CV</li>
-              <li>Credentials properly highlighted</li>
-              <li>Clear, professional layout</li>
-              <li>Multiple language versions</li>
-            </ul>
-          </article>
-          <article class="case-card">
-            <h3>🎨 Graphic Designer</h3>
-            <p>
-              Creative professional who needed a CV as impressive as their portfolio.
-              Result: Freelance clients doubled within a month.
-            </p>
-            <ul>
-              <li>Stunning visual design</li>
-              <li>Portfolio integration</li>
-              <li>Personal branding aligned</li>
-              <li>Print and digital versions</li>
-            </ul>
-          </article>
-          <article class="case-card">
-            <h3>📊 Data Analyst</h3>
-            <p>
-              Career changer from finance background.
-              Result: Successfully transitioned to tech industry role.
-            </p>
-            <ul>
-              <li>Transferable skills highlighted</li>
-              <li>Tech skills prominently featured</li>
-              <li>Career narrative crafted</li>
-              <li>Cover letter included</li>
-            </ul>
-          </article>
-          <article class="case-card">
-            <h3>🏢 Business Development</h3>
-            <p>
-              Sales professional aiming for leadership position.
-              Result: Promoted to Head of Sales within 3 months.
-            </p>
-            <ul>
-              <li>Revenue achievements quantified</li>
-              <li>Leadership experience showcased</li>
-              <li>Professional executive format</li>
-              <li>Personal brand statement</li>
-            </ul>
-          </article>
+
+        <!-- Category Filter Tabs -->
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All CVs</button>
+          <button class="filter-btn" data-filter="professional">Professional</button>
+          <button class="filter-btn" data-filter="ats">ATS Optimized</button>
+          <button class="filter-btn" data-filter="nursing">Healthcare</button>
+          <button class="filter-btn" data-filter="executive">Executive</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="cv-gallery">
+          <!-- Professional CVs -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/CV1.webp" alt="Professional CV Design 1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/CV2.webp" alt="Professional CV Design 2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/CV3.webp" alt="Professional CV Design 3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/CV4.webp" alt="Professional CV Design 4" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/CV5.webp" alt="Professional CV Design 5" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/profesional 1.webp" alt="Professional CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- ATS Optimized CVs -->
+          <div class="cv-item" data-category="ats">
+            <img src="our work/ATS CV.webp" alt="ATS Optimized CV" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">ATS Optimized</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="ats">
+            <img src="our work/New ATS score.webp" alt="ATS Score CV" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">ATS Score</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="ats">
+            <img src="our work/qa 1.webp" alt="QA CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">ATS Optimized</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Healthcare/Nursing CVs -->
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/Nursing 1.webp" alt="Nursing CV Design 1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/nursing 2.webp" alt="Nursing CV Design 2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/nursing 3.webp" alt="Nursing CV Design 3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/Nursing 4.webp" alt="Nursing CV Design 4" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n1.webp" alt="Nursing CV Design N1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n2.webp" alt="Nursing CV Design N2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n3.webp" alt="Nursing CV Design N3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n4.webp" alt="Nursing CV Design N4" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n5.webp" alt="Nursing CV Design N5" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n6.webp" alt="Nursing CV Design N6" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="nursing">
+            <img src="our work/n7.webp" alt="Nursing CV Design N7" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Healthcare</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Executive CVs -->
+          <div class="cv-item" data-category="executive">
+            <img src="our work/executive 1.webp" alt="Executive CV Design 1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Executive</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="executive">
+            <img src="our work/executive 2.webp" alt="Executive CV Design 2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Executive</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="executive">
+            <img src="our work/executive 3.webp" alt="Executive CV Design 3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Executive</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- More Professional Work -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/1.webp" alt="CV Design 1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/2.webp" alt="CV Design 2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/3.webp" alt="CV Design 3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/001.webp" alt="CV Design 001" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/add 1.webp" alt="Additional CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Client Work Samples -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/kavindi's cv.webp" alt="Client CV - Kavindi" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Client Work</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/mohamed cv.webp" alt="Client CV - Mohamed" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Client Work</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/mohamed.webp" alt="Client CV - Mohamed 2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Client Work</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/rachini cv.webp" alt="Client CV - Rachini" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Client Work</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Work Series -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w1.webp" alt="Work Sample W1" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w2.webp" alt="Work Sample W2" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w3.webp" alt="Work Sample W3" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w4.webp" alt="Work Sample W4" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w5.webp" alt="Work Sample W5" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w6.webp" alt="Work Sample W6" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w7.webp" alt="Work Sample W7" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w8.webp" alt="Work Sample W8" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w9.webp" alt="Work Sample W9" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/w10.webp" alt="Work Sample W10" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Recent Screenshots -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2025-08-03 195639.webp" alt="Recent CV Work" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2025-08-17 152709.webp" alt="Recent CV Work" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2025-08-17 152801.webp" alt="Recent CV Work" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2025-08-17 152846.webp" alt="Recent CV Work" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Professional</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+
+          <!-- Latest 2026 Work -->
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220305.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220404.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220435.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220503.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220529.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220551.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220623.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220651.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220723.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220749.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220812.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220847.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 220939.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
+          <div class="cv-item" data-category="professional">
+            <img src="our work/Screenshot 2026-01-20 221013.webp" alt="Latest CV Design" loading="lazy">
+            <div class="cv-overlay">
+              <span class="cv-badge">Latest</span>
+              <button class="view-btn">🔍 View Full</button>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- Lightbox Modal -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</button>
+        <img src="" alt="CV Full View" class="lightbox-img" id="lightbox-img">
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</button>
+      </div>
 
       <section class="section">
         <div class="section-grid">
@@ -197,6 +576,91 @@
     </footer>
   </div>
   <script src="universe.js"></script>
+  <script>
+    // Gallery Filter Functionality
+    (function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cvItems = document.querySelectorAll('.cv-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cvItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+              item.style.animation = 'fade-in-up 0.5s ease-out';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+
+    // Lightbox Functionality
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.getElementById('lightbox-close');
+      const prevBtn = document.getElementById('lightbox-prev');
+      const nextBtn = document.getElementById('lightbox-next');
+      const cvItems = document.querySelectorAll('.cv-item');
+      let currentIndex = 0;
+      let visibleItems = [];
+
+      // Update visible items based on current filter
+      function updateVisibleItems() {
+        visibleItems = Array.from(cvItems).filter(item => item.style.display !== 'none');
+      }
+
+      // Open lightbox
+      cvItems.forEach((item, index) => {
+        item.querySelector('.view-btn').addEventListener('click', () => {
+          updateVisibleItems();
+          currentIndex = visibleItems.indexOf(item);
+          const imgSrc = item.querySelector('img').src;
+          lightboxImg.src = imgSrc;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // Close lightbox
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // Navigation
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        lightboxImg.src = visibleItems[currentIndex].querySelector('img').src;
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        lightboxImg.src = visibleItems[currentIndex].querySelector('img').src;
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+      });
+    })();
+  </script>
 </body>
 
 </html>

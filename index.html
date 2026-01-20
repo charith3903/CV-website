@@ -80,6 +80,44 @@
             target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E); border: none;">💬 WhatsApp
             Us</a>
         </div>
+
+        <!-- Hero Slider - Showcasing Our Work -->
+        <div class="hero-slider-container">
+          <div class="hero-slider-wrapper">
+            <div class="hero-slider" id="hero-slider">
+              <div class="hero-slide">
+                <img src="our work/CV1.webp" alt="Professional CV Design" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/CV2.webp" alt="Modern CV Design" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/CV3.webp" alt="Executive CV Design" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/ATS CV.webp" alt="ATS Optimized CV" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/executive 1.webp" alt="Executive CV Style" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/Nursing 1.webp" alt="Healthcare CV Design" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/w1.webp" alt="Professional CV Sample" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="our work/w2.webp" alt="Creative CV Design" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider-controls">
+            <button class="slider-btn slider-prev" id="slider-prev">❮</button>
+            <div class="slider-dots" id="slider-dots"></div>
+            <button class="slider-btn slider-next" id="slider-next">❯</button>
+          </div>
+          <p class="slider-caption">✨ See what we can create for you! <a href="our-work.html">View All Work →</a></p>
+        </div>
       </section>
 
       <section class="section">
@@ -278,6 +316,76 @@
 
       // Rotate every 3 seconds
       setInterval(rotateWords, 3000);
+    })();
+
+    // Hero Slider Functionality
+    (function () {
+      const slider = document.getElementById('hero-slider');
+      const slides = slider.querySelectorAll('.hero-slide');
+      const prevBtn = document.getElementById('slider-prev');
+      const nextBtn = document.getElementById('slider-next');
+      const dotsContainer = document.getElementById('slider-dots');
+      let currentSlide = 0;
+      let autoSlideInterval;
+
+      // Create dots
+      slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('slider-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentSlide);
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+        resetAutoSlide();
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider();
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(nextSlide, 4000);
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+      });
+
+      // Start auto slide
+      autoSlideInterval = setInterval(nextSlide, 4000);
+
+      // Pause on hover
+      slider.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+      slider.parentElement.addEventListener('mouseleave', () => {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+      });
     })();
   </script>
 </body>
