@@ -1,0 +1,14 @@
+# robots.txt — The Elegant Grid
+# https://theelegantgrid.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (add as needed)
+# Disallow: /admin/
+
+# Crawl delay (optional, respected by some bots)
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://theelegantgrid.com/sitemap.xml
