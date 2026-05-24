@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ─── Primary SEO ─── -->
+  <title>CV Writing Blog | The Elegant Grid — Sri Lanka's #1 CV Design Tips & Career Advice</title>
+  <meta name="description" content="Expert CV writing tips, career advice, LinkedIn optimization guides, and job search strategies for Sri Lankan professionals. Free resources from Sri Lanka's #1 CV design service." />
+  <meta name="keywords" content="CV writing tips Sri Lanka, career advice Sri Lanka, resume tips Colombo, job search Sri Lanka, LinkedIn tips Sri Lanka, CV blog Sri Lanka, professional development Sri Lanka" />
+  <meta name="author" content="The Elegant Grid" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://theelegantgrid.com/blog" />
+
+  <!-- ─── Geo Targeting: Sri Lanka ─── -->
+  <meta name="geo.region" content="LK" />
+  <meta name="geo.placename" content="Sri Lanka" />
+  <meta name="geo.position" content="7.8731;80.7718" />
+  <meta name="ICBM" content="7.8731, 80.7718" />
+  <meta name="language" content="en-LK" />
+
+  <!-- ─── Open Graph ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Elegant Grid" />
+  <meta property="og:title" content="CV Writing Blog | The Elegant Grid — Sri Lanka Career Advice" />
+  <meta property="og:description" content="Expert CV tips, career advice & job search strategies for Sri Lankan professionals. Free resources from Sri Lanka's #1 CV service." />
+  <meta property="og:url" content="https://theelegantgrid.com/blog" />
+  <meta property="og:image" content="https://theelegantgrid.com/image/logo.jpg" />
+  <meta property="og:locale" content="en_LK" />
+
+  <!-- ─── Twitter Card ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@theelegantgrid" />
+  <meta name="twitter:title" content="CV Writing Blog | The Elegant Grid — Sri Lanka" />
+  <meta name="twitter:description" content="Expert CV tips, career advice & job search strategies for Sri Lankan professionals." />
+  <meta name="twitter:image" content="https://theelegantgrid.com/image/logo.jpg" />
+
+  <!-- ─── Theme ─── -->
+  <meta name="theme-color" content="#0f0f0f" />
+
+  <!-- ─── JSON-LD ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://theelegantgrid.com/blog#blog",
+    "url": "https://theelegantgrid.com/blog",
+    "name": "The Elegant Grid Blog — CV Writing & Career Advice for Sri Lanka",
+    "description": "Expert CV writing tips, career guidance, and job search strategies tailored for Sri Lankan professionals.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Elegant Grid",
+      "url": "https://theelegantgrid.com",
+      "logo": { "@type": "ImageObject", "url": "https://theelegantgrid.com/image/logo.jpg" }
+    },
+    "inLanguage": "en-LK",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theelegantgrid.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://theelegantgrid.com/blog" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="universe.css" />
+  <style>
+    .blog-hero { text-align: center; padding: 4rem 2rem 2rem; }
+    .blog-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .blog-hero p { color: #aaa; max-width: 600px; margin: 0 auto 2rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .blog-card { background: var(--card-bg, #1a1a2e); border: 1px solid var(--border-light, #2a2a4a); border-radius: 1rem; padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,0.15); }
+    .blog-card .tag { display: inline-block; background: rgba(124,58,237,0.15); color: #a855f7; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .blog-card h2 { font-size: 1.05rem; margin-bottom: 0.6rem; line-height: 1.4; }
+    .blog-card h2 a { text-decoration: none; color: inherit; }
+    .blog-card h2 a:hover { color: #a855f7; }
+    .blog-card p { font-size: 0.9rem; color: #999; line-height: 1.6; margin-bottom: 1rem; }
+    .blog-card .read-more { font-size: 0.85rem; color: #a855f7; text-decoration: none; font-weight: 600; }
+    .blog-card .read-more:hover { text-decoration: underline; }
+    .blog-filter { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; padding: 1rem 2rem 2rem; }
+    .filter-btn { background: transparent; border: 1px solid #333; color: #aaa; padding: 0.4rem 1.2rem; border-radius: 999px; cursor: pointer; font-size: 0.85rem; font-family: inherit; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: #7c3aed; color: white; border-color: #7c3aed; }
+    .section-title { text-align: center; font-size: 1.1rem; color: #a855f7; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2rem 2rem 0.5rem; }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a href="index.html" class="site-brand">
+        <img src="image/logo.jpg" alt="The Elegant Grid Logo" class="site-logo">
+        <span>The Elegant Grid</span>
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="our-service.html">Our Service</a>
+        <a class="nav-link" href="our-packages.html">Our Packages</a>
+        <a class="nav-link" href="our-work.html">Our Work</a>
+        <a class="nav-link active" href="blog.html">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="blog-hero">
+        <p class="hero__eyebrow">🇱🇰 Sri Lanka's #1 CV Resource Hub</p>
+        <h1>CV Writing Tips & Career Advice for Sri Lanka</h1>
+        <p>Free expert guides on CV writing, LinkedIn optimization, job searching, and career growth — crafted specifically for Sri Lankan professionals.</p>
+      </div>
+
+      <!-- CV Writing -->
+      <p class="section-title">📄 CV & Resume Writing</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">CV Writing</span><h2><a href="blog/cv-writing-service-sri-lanka.html">Best CV Writing Service in Sri Lanka — What to Look For</a></h2><p>Discover what makes a top-tier CV writing service and why The Elegant Grid leads the way in Sri Lanka.</p><a href="blog/cv-writing-service-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Writing</span><h2><a href="blog/how-to-write-professional-cv-sri-lanka.html">How to Write a Professional CV in Sri Lanka (2026 Guide)</a></h2><p>A step-by-step guide to writing a winning professional CV tailored for the Sri Lanka job market.</p><a href="blog/how-to-write-professional-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">ATS</span><h2><a href="blog/ats-optimized-cv-sri-lanka.html">ATS-Optimized CV for Sri Lanka Jobs: The Complete Guide</a></h2><p>Learn how Applicant Tracking Systems work and how to beat them to land more interviews in Sri Lanka.</p><a href="blog/ats-optimized-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Writing</span><h2><a href="blog/cv-format-sri-lanka.html">CV Format for Sri Lanka Employers — 2026 Standards</a></h2><p>The exact CV format preferred by Sri Lankan HR managers and recruiters — with real examples.</p><a href="blog/cv-format-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Tips</span><h2><a href="blog/cv-mistakes-sri-lanka.html">Top 10 CV Mistakes Sri Lankan Job Seekers Make</a></h2><p>Avoid the most common CV errors that are costing Sri Lankan professionals their dream jobs.</p><a href="blog/cv-mistakes-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Government</span><h2><a href="blog/cv-for-government-jobs-sri-lanka.html">How to Write a CV for Government Jobs in Sri Lanka</a></h2><p>Government job CVs in Sri Lanka have unique requirements. Here's exactly how to write one that wins.</p><a href="blog/cv-for-government-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Graduates</span><h2><a href="blog/cv-tips-fresh-graduates-sri-lanka.html">CV Tips for Fresh Graduates in Sri Lanka — Land Your First Job</a></h2><p>No experience? No problem. Here's how fresh graduates in Sri Lanka can write a powerful CV.</p><a href="blog/cv-tips-fresh-graduates-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Banking</span><h2><a href="blog/cv-for-banking-jobs-sri-lanka.html">How to Write a CV for Banking Jobs in Sri Lanka</a></h2><p>Banks in Sri Lanka look for specific qualities. Your CV needs to reflect them from line one.</p><a href="blog/cv-for-banking-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Writing</span><h2><a href="blog/professional-resume-writing-colombo.html">Professional Resume Writing Services in Colombo, Sri Lanka</a></h2><p>Looking for professional resume writing in Colombo? Here's everything you need to know.</p><a href="blog/professional-resume-writing-colombo.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Strategy</span><h2><a href="blog/tailor-cv-sri-lankan-companies.html">How to Tailor Your CV for Sri Lankan Companies</a></h2><p>Generic CVs get ignored. Learn how to customize your CV for specific Sri Lankan employers.</p><a href="blog/tailor-cv-sri-lankan-companies.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV vs Resume</span><h2><a href="blog/cv-vs-resume-sri-lanka.html">CV vs Resume: What's the Difference in Sri Lanka?</a></h2><p>Confused about CV vs resume? We clarify the difference and what Sri Lankan employers actually want.</p><a href="blog/cv-vs-resume-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">IT Jobs</span><h2><a href="blog/cv-for-it-jobs-sri-lanka.html">How to Write a CV for IT Jobs in Sri Lanka</a></h2><p>The IT industry in Sri Lanka is booming. Make sure your CV reflects the right technical skills.</p><a href="blog/cv-for-it-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Engineering</span><h2><a href="blog/cv-writing-tips-engineers-sri-lanka.html">CV Writing Tips for Engineers in Sri Lanka</a></h2><p>Engineering CVs need to balance technical depth with readability. Here's the winning formula.</p><a href="blog/cv-writing-tips-engineers-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Hospitality</span><h2><a href="blog/cv-for-hotel-tourism-jobs-sri-lanka.html">CV for Hotel & Tourism Jobs in Sri Lanka</a></h2><p>Sri Lanka's tourism industry is thriving. Learn how to write a CV that stands out in hospitality.</p><a href="blog/cv-for-hotel-tourism-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Healthcare</span><h2><a href="blog/cv-for-healthcare-sri-lanka.html">CV Writing for Healthcare Professionals in Sri Lanka</a></h2><p>Doctors, nurses, and allied health professionals — here's the CV format that gets results in Sri Lanka.</p><a href="blog/cv-for-healthcare-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Teaching</span><h2><a href="blog/cv-for-teaching-jobs-sri-lanka.html">How to Write a CV for Teaching Jobs in Sri Lanka</a></h2><p>Education sector CVs in Sri Lanka require a specific approach. Here's what schools look for.</p><a href="blog/cv-for-teaching-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">ATS</span><h2><a href="blog/get-cv-past-ats-sri-lanka.html">How to Get Your CV Past ATS Systems in Sri Lanka</a></h2><p>Most CVs are rejected by software before a human ever reads them. Here's how to get through.</p><a href="blog/get-cv-past-ats-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Format</span><h2><a href="blog/cv-length-sri-lanka.html">CV Length: How Long Should a Sri Lankan CV Be?</a></h2><p>One page or three? We settle the debate on the ideal CV length for Sri Lankan job seekers.</p><a href="blog/cv-length-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Tips</span><h2><a href="blog/work-experience-cv-sri-lanka.html">How to List Work Experience on a Sri Lankan CV</a></h2><p>The work experience section makes or breaks your CV. Here's exactly how to write it for Sri Lanka.</p><a href="blog/work-experience-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Tips</span><h2><a href="blog/skills-on-sri-lankan-cv.html">How to Add Skills to Your Sri Lankan CV Effectively</a></h2><p>The skills section is more important than ever. Learn which skills to list and how to present them.</p><a href="blog/skills-on-sri-lankan-cv.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Cover Letters -->
+      <p class="section-title">✉️ Cover Letters</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/how-to-write-cover-letter-sri-lanka.html">How to Write a Cover Letter in Sri Lanka (With Examples)</a></h2><p>A complete guide to writing a compelling cover letter that gets Sri Lankan employers to call you back.</p><a href="blog/how-to-write-cover-letter-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/cover-letter-tips-sri-lanka.html">10 Cover Letter Tips Every Sri Lankan Job Seeker Needs</a></h2><p>Most cover letters in Sri Lanka are generic and forgettable. These tips will make yours unforgettable.</p><a href="blog/cover-letter-tips-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Graduates</span><h2><a href="blog/cover-letter-fresh-graduates-sri-lanka.html">Cover Letter for Fresh Graduates in Sri Lanka</a></h2><p>Just finished university? Here's how to write a powerful cover letter with no work experience.</p><a href="blog/cover-letter-fresh-graduates-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Government</span><h2><a href="blog/cover-letter-government-jobs-sri-lanka.html">Cover Letter for Government Jobs in Sri Lanka</a></h2><p>Government cover letters require formal structure and specific language. We'll show you exactly how.</p><a href="blog/cover-letter-government-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/cover-letter-mistakes-sri-lanka.html">7 Cover Letter Mistakes to Avoid in Sri Lanka</a></h2><p>These common cover letter mistakes are instantly turning off Sri Lankan hiring managers. Fix them now.</p><a href="blog/cover-letter-mistakes-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/cover-letter-format-sri-lanka.html">Cover Letter Format for Sri Lanka — Templates & Examples</a></h2><p>The right cover letter format can double your response rate. Here's the one that works in Sri Lanka.</p><a href="blog/cover-letter-format-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/how-to-address-cover-letter-sri-lanka.html">How to Address a Cover Letter in Sri Lanka</a></h2><p>Unsure how to open your cover letter? Here's the proper way to address it in Sri Lankan context.</p><a href="blog/how-to-address-cover-letter-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">IT Jobs</span><h2><a href="blog/cover-letter-it-jobs-sri-lanka.html">Cover Letter for IT Jobs in Sri Lanka — With Template</a></h2><p>IT cover letters need to balance technical skills with communication ability. Here's how to do it.</p><a href="blog/cover-letter-it-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Banking</span><h2><a href="blog/cover-letter-banking-jobs-sri-lanka.html">Cover Letter for Banking Jobs in Sri Lanka</a></h2><p>Sri Lankan banks receive hundreds of applications. Your cover letter needs to cut through the noise.</p><a href="blog/cover-letter-banking-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Cover Letter</span><h2><a href="blog/cover-letter-vs-application-letter-sri-lanka.html">Cover Letter vs Application Letter in Sri Lanka</a></h2><p>Are they the same thing? Here's the clear distinction and when to use each in Sri Lanka.</p><a href="blog/cover-letter-vs-application-letter-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- LinkedIn -->
+      <p class="section-title">🔗 LinkedIn Optimization</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-profile-optimization-sri-lanka.html">How to Optimize Your LinkedIn Profile in Sri Lanka (2026)</a></h2><p>A fully optimized LinkedIn profile can bring opportunities to you. Here's the complete Sri Lanka guide.</p><a href="blog/linkedin-profile-optimization-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-tips-sri-lankan-professionals.html">LinkedIn Tips for Sri Lankan Professionals — Get More Visibility</a></h2><p>Practical LinkedIn strategies that are proven to work for professionals in the Sri Lanka market.</p><a href="blog/linkedin-tips-sri-lankan-professionals.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/get-noticed-recruiters-linkedin-sri-lanka.html">How to Get Noticed by Recruiters on LinkedIn in Sri Lanka</a></h2><p>Sri Lankan recruiters are actively searching LinkedIn. Here's how to make sure they find you first.</p><a href="blog/get-noticed-recruiters-linkedin-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-profile-photo-tips-sri-lanka.html">LinkedIn Profile Photo Tips for Sri Lankan Professionals</a></h2><p>Your LinkedIn photo is your first impression. Here's what makes a great professional photo in Sri Lanka.</p><a href="blog/linkedin-profile-photo-tips-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-summary-examples-sri-lanka.html">LinkedIn Summary Examples for Sri Lankan Professionals</a></h2><p>Powerful LinkedIn About section examples tailored for different industries in Sri Lanka.</p><a href="blog/linkedin-summary-examples-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-find-jobs-sri-lanka.html">How to Use LinkedIn to Find Jobs in Sri Lanka</a></h2><p>LinkedIn is the #1 professional network in Sri Lanka. Here's how to use it to find your next job.</p><a href="blog/linkedin-find-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-keywords-sri-lanka.html">LinkedIn Keywords for the Sri Lanka Job Market</a></h2><p>The right keywords in your LinkedIn profile can dramatically increase your recruiter views in Sri Lanka.</p><a href="blog/linkedin-keywords-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-network-sri-lanka.html">How to Build Your LinkedIn Network in Sri Lanka</a></h2><p>A strong network is everything in Sri Lanka's job market. Here's how to grow yours strategically on LinkedIn.</p><a href="blog/linkedin-network-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-recommendations-sri-lanka.html">LinkedIn Recommendations for Sri Lankan Professionals — How to Get Them</a></h2><p>Recommendations build credibility. Here's how to ask for and give LinkedIn recommendations in Sri Lanka.</p><a href="blog/linkedin-recommendations-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">LinkedIn</span><h2><a href="blog/linkedin-vs-cv-sri-lanka.html">LinkedIn vs CV in Sri Lanka — Which Do Employers Check First?</a></h2><p>Do Sri Lankan employers check your LinkedIn or your CV first? The answer might surprise you.</p><a href="blog/linkedin-vs-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Job Search -->
+      <p class="section-title">🔍 Job Search & Interviews</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">Job Search</span><h2><a href="blog/top-job-portals-sri-lanka.html">Top Job Portals in Sri Lanka — Best Sites to Find Jobs</a></h2><p>A complete roundup of the best job boards, portals, and platforms to find jobs in Sri Lanka in 2026.</p><a href="blog/top-job-portals-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Job Search</span><h2><a href="blog/find-jobs-colombo-sri-lanka.html">How to Find Jobs in Colombo, Sri Lanka — A 2026 Guide</a></h2><p>Colombo is the economic hub of Sri Lanka. Here's exactly how to land a job in the city.</p><a href="blog/find-jobs-colombo-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Remote Work</span><h2><a href="blog/remote-jobs-from-sri-lanka.html">How to Find Remote Jobs from Sri Lanka in 2026</a></h2><p>Work for global companies from Sri Lanka. Here are the best platforms and strategies for landing remote jobs.</p><a href="blog/remote-jobs-from-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Job Market</span><h2><a href="blog/best-jobs-sri-lanka-2025.html">Best Jobs in Sri Lanka for 2026 — High Demand Careers</a></h2><p>Which jobs are in highest demand in Sri Lanka right now? This guide has all the answers.</p><a href="blog/best-jobs-sri-lanka-2025.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Job Search</span><h2><a href="blog/how-to-apply-jobs-sri-lanka.html">How to Apply for Jobs in Sri Lanka — Step by Step Guide</a></h2><p>From finding the right vacancy to clicking submit — the complete job application guide for Sri Lanka.</p><a href="blog/how-to-apply-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Interview</span><h2><a href="blog/job-interview-tips-sri-lanka.html">Job Interview Tips for Sri Lanka — Walk In Confident</a></h2><p>Sri Lankan interviews have cultural nuances. Here are the tips that will make you shine in any interview.</p><a href="blog/job-interview-tips-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Interview</span><h2><a href="blog/common-interview-questions-sri-lanka.html">20 Most Common Interview Questions in Sri Lanka (With Answers)</a></h2><p>These are the questions Sri Lankan employers always ask — and the answers that will impress them.</p><a href="blog/common-interview-questions-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Salary</span><h2><a href="blog/salary-negotiation-sri-lanka.html">How to Negotiate Salary in Sri Lanka — Get What You Deserve</a></h2><p>Most Sri Lankans accept the first offer. Here's how to confidently negotiate for better pay.</p><a href="blog/salary-negotiation-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Job Market</span><h2><a href="blog/top-industries-hiring-sri-lanka.html">Top Industries Hiring in Sri Lanka Right Now</a></h2><p>Which industries are actively recruiting in Sri Lanka? Here's the current state of the job market.</p><a href="blog/top-industries-hiring-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">IT Jobs</span><h2><a href="blog/it-jobs-sri-lanka.html">How to Find IT Jobs in Sri Lanka — The Complete Guide</a></h2><p>Sri Lanka's IT sector is booming. Here's how to break in and land your dream tech job.</p><a href="blog/it-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Career Development -->
+      <p class="section-title">🚀 Career Development</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">Career</span><h2><a href="blog/career-change-sri-lanka.html">Career Change Tips for Sri Lankan Professionals</a></h2><p>Thinking of switching careers in Sri Lanka? Here's how to make a successful transition without starting over.</p><a href="blog/career-change-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Career</span><h2><a href="blog/how-to-get-promoted-sri-lanka.html">How to Get Promoted Faster in Sri Lanka</a></h2><p>What does it actually take to climb the corporate ladder in Sri Lanka? Here are the proven strategies.</p><a href="blog/how-to-get-promoted-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Development</span><h2><a href="blog/professional-development-sri-lanka.html">Professional Development for Sri Lankans — Invest in Yourself</a></h2><p>The best investments Sri Lankan professionals can make in their skills and career growth.</p><a href="blog/professional-development-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Branding</span><h2><a href="blog/personal-brand-sri-lanka.html">How to Build a Strong Personal Brand in Sri Lanka</a></h2><p>Your personal brand is your competitive advantage. Here's how to build one that opens doors in Sri Lanka.</p><a href="blog/personal-brand-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Networking</span><h2><a href="blog/networking-tips-sri-lanka.html">Networking Tips for Sri Lankan Professionals</a></h2><p>In Sri Lanka, who you know matters. Here's how to build a powerful professional network.</p><a href="blog/networking-tips-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Skills</span><h2><a href="blog/upskill-sri-lanka-job-market.html">How to Upskill for the Sri Lanka Job Market in 2026</a></h2><p>The job market is changing fast. These are the skills Sri Lankan employers are desperately looking for.</p><a href="blog/upskill-sri-lanka-job-market.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Freelancing</span><h2><a href="blog/freelancing-sri-lanka.html">Freelancing in Sri Lanka: How to Start & Succeed</a></h2><p>Freelancing is exploding in Sri Lanka. Here's how to launch your freelance career and find clients globally.</p><a href="blog/freelancing-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Digital Marketing</span><h2><a href="blog/digital-marketing-career-sri-lanka.html">How to Start a Career in Digital Marketing in Sri Lanka</a></h2><p>Digital marketing is one of the fastest-growing fields in Sri Lanka. Here's your complete roadmap.</p><a href="blog/digital-marketing-career-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Certifications</span><h2><a href="blog/certifications-sri-lankan-professionals.html">Top Certifications for Sri Lankan Professionals in 2026</a></h2><p>These certifications will significantly boost your employability and salary in the Sri Lanka job market.</p><a href="blog/certifications-sri-lankan-professionals.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Work-Life</span><h2><a href="blog/work-life-balance-sri-lanka.html">Work-Life Balance Tips for Sri Lankan Employees</a></h2><p>Burnout is real. Here's how Sri Lankan professionals can maintain a healthy work-life balance.</p><a href="blog/work-life-balance-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Industry-Specific CVs -->
+      <p class="section-title">🏢 Industry-Specific CV Guides</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">Finance</span><h2><a href="blog/cv-finance-jobs-sri-lanka.html">CV for Finance Jobs in Sri Lanka — What Employers Want</a></h2><p>Finance CVs in Sri Lanka need to show numbers, results, and credentials. Here's the formula.</p><a href="blog/cv-finance-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Marketing</span><h2><a href="blog/cv-marketing-jobs-sri-lanka.html">CV for Marketing Jobs in Sri Lanka</a></h2><p>Marketing CVs need to market themselves. Here's how to write a CV that gets marketing jobs in Sri Lanka.</p><a href="blog/cv-marketing-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Accounting</span><h2><a href="blog/cv-accountants-sri-lanka.html">CV for Accountants in Sri Lanka — CA, CMA & CIMA Guide</a></h2><p>Accounting CVs in Sri Lanka must showcase qualifications and technical skills. Here's exactly how.</p><a href="blog/cv-accountants-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Healthcare</span><h2><a href="blog/cv-doctors-sri-lanka.html">CV for Doctors in Sri Lanka — Medical CV Writing Guide</a></h2><p>A medical CV in Sri Lanka is unique. Here's the format, sections, and tips that get you noticed.</p><a href="blog/cv-doctors-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Legal</span><h2><a href="blog/cv-lawyers-sri-lanka.html">CV for Lawyers in Sri Lanka — Legal CV Writing Guide</a></h2><p>Legal CVs must demonstrate expertise and precision. Here's how to write one that impresses Sri Lankan law firms.</p><a href="blog/cv-lawyers-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Tech</span><h2><a href="blog/cv-software-engineers-sri-lanka.html">CV for Software Engineers in Sri Lanka — Full Tech Guide</a></h2><p>Sri Lanka's tech industry is growing fast. Here's the CV that will get you hired by top companies.</p><a href="blog/cv-software-engineers-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Management</span><h2><a href="blog/cv-project-managers-sri-lanka.html">CV for Project Managers in Sri Lanka</a></h2><p>PM CVs in Sri Lanka need to show leadership, delivery, and methodology knowledge. Here's how.</p><a href="blog/cv-project-managers-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Sales</span><h2><a href="blog/cv-sales-professionals-sri-lanka.html">CV for Sales Professionals in Sri Lanka</a></h2><p>Your sales CV needs to sell itself. Here's how to write a results-driven sales CV for Sri Lanka.</p><a href="blog/cv-sales-professionals-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">HR</span><h2><a href="blog/cv-hr-professionals-sri-lanka.html">CV for HR Professionals in Sri Lanka</a></h2><p>HR CVs in Sri Lanka need a unique combination of soft skills and HR metrics. Here's the guide.</p><a href="blog/cv-hr-professionals-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Logistics</span><h2><a href="blog/cv-logistics-sri-lanka.html">CV for Logistics & Supply Chain Jobs in Sri Lanka</a></h2><p>Sri Lanka's port and logistics sector is massive. Here's how to write a CV that stands out.</p><a href="blog/cv-logistics-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Construction</span><h2><a href="blog/cv-construction-jobs-sri-lanka.html">CV for Construction Jobs in Sri Lanka</a></h2><p>Construction CVs need specific technical skills and project history. Here's the complete guide for Sri Lanka.</p><a href="blog/cv-construction-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Media</span><h2><a href="blog/cv-media-journalism-sri-lanka.html">CV for Media & Journalism Jobs in Sri Lanka</a></h2><p>Media CVs are competitive in Sri Lanka. Here's how to write one that showcases your storytelling ability.</p><a href="blog/cv-media-journalism-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Hospitality</span><h2><a href="blog/cv-hospitality-jobs-sri-lanka.html">CV for Hospitality & Hotel Jobs in Sri Lanka</a></h2><p>Tourism is Sri Lanka's pride. Here's the CV format that gets you hired in hospitality.</p><a href="blog/cv-hospitality-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">NGO</span><h2><a href="blog/cv-ngo-jobs-sri-lanka.html">CV for NGO & Non-Profit Jobs in Sri Lanka</a></h2><p>NGO CVs in Sri Lanka emphasize impact and mission alignment. Here's how to write one that gets results.</p><a href="blog/cv-ngo-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Overseas</span><h2><a href="blog/cv-overseas-jobs-sri-lanka.html">CV for Overseas Jobs from Sri Lanka — International CV Guide</a></h2><p>Planning to work abroad? Here's how Sri Lankans should adapt their CV for international employers.</p><a href="blog/cv-overseas-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Overseas Jobs -->
+      <p class="section-title">✈️ Working Abroad from Sri Lanka</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">UAE</span><h2><a href="blog/cv-jobs-uae-from-sri-lanka.html">CV for Jobs in UAE from Sri Lanka — Dubai & Abu Dhabi Guide</a></h2><p>Thousands of Sri Lankans work in the UAE. Here's how to write a CV that gets you hired there.</p><a href="blog/cv-jobs-uae-from-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Abroad</span><h2><a href="blog/cv-tips-sri-lankans-abroad.html">CV Tips for Sri Lankans Going Abroad — Country-by-Country Guide</a></h2><p>Every country has different CV expectations. Here's what Sri Lankans need to know before applying abroad.</p><a href="blog/cv-tips-sri-lankans-abroad.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Qatar</span><h2><a href="blog/cv-jobs-qatar-from-sri-lanka.html">CV for Jobs in Qatar from Sri Lanka</a></h2><p>Qatar is a major destination for Sri Lankan workers. Here's the CV format that gets results there.</p><a href="blog/cv-jobs-qatar-from-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Saudi Arabia</span><h2><a href="blog/cv-saudi-arabia-sri-lanka.html">CV for Saudi Arabia Jobs from Sri Lanka</a></h2><p>Saudi Arabia has specific CV requirements. Here's what Sri Lankans need to include to get hired.</p><a href="blog/cv-saudi-arabia-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">UK</span><h2><a href="blog/cv-uk-jobs-sri-lanka.html">CV Tips for Sri Lankans Applying to UK Jobs</a></h2><p>UK CVs are very different from Sri Lankan ones. Here's exactly how to adapt yours for the British market.</p><a href="blog/cv-uk-jobs-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- Portfolio & Personal Branding -->
+      <p class="section-title">🌟 Portfolio & Personal Branding</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">Portfolio</span><h2><a href="blog/portfolio-website-sri-lanka.html">Why You Need a Portfolio Website in Sri Lanka in 2026</a></h2><p>A portfolio website can 10x your job opportunities in Sri Lanka. Here's why and how to get one.</p><a href="blog/portfolio-website-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Branding</span><h2><a href="blog/personal-branding-sri-lanka.html">How to Build a Personal Brand as a Sri Lankan Professional</a></h2><p>Your personal brand determines your career trajectory. Here's how to build one that commands respect.</p><a href="blog/personal-branding-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Designers</span><h2><a href="blog/portfolio-tips-sri-lankan-designers.html">Portfolio Tips for Sri Lankan Designers — Stand Out Creatively</a></h2><p>A great design portfolio speaks louder than any CV. Here's how Sri Lankan designers should present their work.</p><a href="blog/portfolio-tips-sri-lankan-designers.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Online Presence</span><h2><a href="blog/showcase-work-online-sri-lanka.html">How to Showcase Your Work Online in Sri Lanka</a></h2><p>Your online presence is your new CV. Here's how to put your best work in front of Sri Lankan employers.</p><a href="blog/showcase-work-online-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Graduates</span><h2><a href="blog/personal-branding-fresh-graduates-sri-lanka.html">Personal Branding for Sri Lankan Fresh Graduates</a></h2><p>Stand out from thousands of fresh graduates in Sri Lanka with a strong personal brand from day one.</p><a href="blog/personal-branding-fresh-graduates-sri-lanka.html" class="read-more">Read More →</a></div>
+      </div>
+
+      <!-- FAQ & General -->
+      <p class="section-title">❓ FAQ & General CV Advice</p>
+      <div class="blog-grid">
+        <div class="blog-card"><span class="tag">FAQ</span><h2><a href="blog/what-is-ats-optimized-cv.html">What is an ATS-Optimized CV? — Complete Explanation</a></h2><p>ATS stands for Applicant Tracking System. Here's everything you need to know about it and why it matters.</p><a href="blog/what-is-ats-optimized-cv.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Tips</span><h2><a href="blog/make-cv-stand-out-sri-lanka.html">How to Make Your CV Stand Out in Sri Lanka — 15 Power Tips</a></h2><p>When every applicant has a CV, yours needs to do something extraordinary. Here's exactly how.</p><a href="blog/make-cv-stand-out-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">FAQ</span><h2><a href="blog/why-hire-cv-writer-sri-lanka.html">Why Hire a Professional CV Writer in Sri Lanka?</a></h2><p>Is it worth paying for professional CV writing in Sri Lanka? Here's the honest answer with real ROI data.</p><a href="blog/why-hire-cv-writer-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Pricing</span><h2><a href="blog/cv-writing-cost-sri-lanka.html">How Much Does CV Writing Cost in Sri Lanka? (2026 Prices)</a></h2><p>CV writing service prices in Sri Lanka vary widely. Here's what you should expect to pay — and what's worth it.</p><a href="blog/cv-writing-cost-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">FAQ</span><h2><a href="blog/how-long-cv-writing-takes.html">How Long Does Professional CV Writing Take?</a></h2><p>From order to delivery — here's a realistic timeline for professional CV writing and what affects it.</p><a href="blog/how-long-cv-writing-takes.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">FAQ</span><h2><a href="blog/photo-on-cv-sri-lanka.html">Do I Need a Photo on My Sri Lankan CV?</a></h2><p>The photo debate in Sri Lanka. Should you include one or not? We give you the definitive answer.</p><a href="blog/photo-on-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Sinhala</span><h2><a href="blog/cv-in-sinhala.html">How to Write a CV in Sinhala — Guide for Sri Lankan Government Jobs</a></h2><p>Some government positions in Sri Lanka require Sinhala CVs. Here's how to write one correctly.</p><a href="blog/cv-in-sinhala.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Expats</span><h2><a href="blog/cv-tips-expats-returning-sri-lanka.html">CV Tips for Sri Lankan Expats Returning Home</a></h2><p>Returning to Sri Lanka after working abroad? Here's how to position your international experience on your CV.</p><a href="blog/cv-tips-expats-returning-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">CV Update</span><h2><a href="blog/update-old-cv-sri-lanka.html">How to Update Your Old CV in Sri Lanka — A Complete Refresh Guide</a></h2><p>Your old CV might be costing you jobs. Here's how to bring it up to 2026 standards for Sri Lanka.</p><a href="blog/update-old-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Recruiters</span><h2><a href="blog/what-recruiters-look-for-sri-lanka.html">What Recruiters Look for in a Sri Lankan CV</a></h2><p>We asked Sri Lankan recruiters what they actually look for. Here's what they told us — unfiltered.</p><a href="blog/what-recruiters-look-for-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">First Job</span><h2><a href="blog/cv-first-job-sri-lanka.html">How to Write a CV for Your First Job in Sri Lanka</a></h2><p>Writing your very first CV in Sri Lanka? This guide takes you from blank page to job offer.</p><a href="blog/cv-first-job-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">FAQ</span><h2><a href="blog/references-on-cv-sri-lanka.html">Do I Need References on My Sri Lankan CV?</a></h2><p>The references section confuses many Sri Lankan job seekers. Here's the definitive answer.</p><a href="blog/references-on-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Career Gaps</span><h2><a href="blog/employment-gaps-cv-sri-lanka.html">How to Handle Employment Gaps on a Sri Lankan CV</a></h2><p>Don't let career gaps derail your job search. Here's how to address them honestly and powerfully.</p><a href="blog/employment-gaps-cv-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">Career Break</span><h2><a href="blog/cv-after-career-break-sri-lanka.html">How to Write a CV After a Career Break in Sri Lanka</a></h2><p>Took time off work? Here's how to re-enter the Sri Lanka job market with a CV that works for you.</p><a href="blog/cv-after-career-break-sri-lanka.html" class="read-more">Read More →</a></div>
+        <div class="blog-card"><span class="tag">About Us</span><h2><a href="blog/best-cv-service-sri-lanka-elegant-grid.html">Why The Elegant Grid is Sri Lanka's #1 CV Design Service</a></h2><p>What sets The Elegant Grid apart from every other CV service in Sri Lanka? Here's the honest answer.</p><a href="blog/best-cv-service-sri-lanka-elegant-grid.html" class="read-more">Read More →</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="universe.js"></script>
+</body>
+</html>
