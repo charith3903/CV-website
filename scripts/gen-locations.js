@@ -175,7 +175,7 @@ const cities = [
   },
 ];
 
-const gaSnippet = `  <meta name="google-site-verification" content="PASTE_YOUR_GSC_VERIFICATION_CODE_HERE" />
+const gaSnippet = `  <meta name="google-site-verification" content="EtRf5AR_Bwe78my98YXGcxAbP3IAm6jEaLNcoJSj36k" />
   <!-- Google tag (gtag.js) - replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
