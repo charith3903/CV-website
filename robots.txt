@@ -1,5 +1,5 @@
 # robots.txt — The Elegant Grid
-# https://theelegantgrid.com
+# https://elegantgrid.tech
 
 User-agent: *
 Allow: /
@@ -11,4 +11,4 @@ Allow: /
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: https://theelegantgrid.com/sitemap.xml
+Sitemap: https://elegantgrid.tech/sitemap.xml

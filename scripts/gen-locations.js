@@ -254,7 +254,7 @@ function footer() {
 }
 
 function cityPage(c) {
-  const url = `https://theelegantgrid.com/cv-writing-service-${c.slug}`;
+  const url = `https://elegantgrid.tech/cv-writing-service-${c.slug}`;
   const title = `CV Writing Service in ${c.name}, Sri Lanka | The Elegant Grid`;
   const desc = `Professional CV, resume & cover letter writing service for ${c.name} job seekers. ATS-optimized, unlimited revisions, pay only when satisfied. Serving ${c.name} and all of Sri Lanka online.`;
   const keywords = `CV writing service ${c.name}, resume writing ${c.name} Sri Lanka, professional CV ${c.name}, ATS CV ${c.name}, cover letter ${c.name} Sri Lanka`;
@@ -268,12 +268,12 @@ function cityPage(c) {
         url,
         name: title,
         description: desc,
-        isPartOf: { '@id': 'https://theelegantgrid.com/#website' },
+        isPartOf: { '@id': 'https://elegantgrid.tech/#website' },
         breadcrumb: {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://theelegantgrid.com/' },
-            { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://theelegantgrid.com/locations' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elegantgrid.tech/' },
+            { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://elegantgrid.tech/locations' },
             { '@type': 'ListItem', position: 3, name: c.name, item: url },
           ],
         },
@@ -284,8 +284,8 @@ function cityPage(c) {
         name: `The Elegant Grid — ${c.name}`,
         description: desc,
         url,
-        logo: 'https://theelegantgrid.com/image/logo-social.png',
-        image: 'https://theelegantgrid.com/image/logo-social.png',
+        logo: 'https://elegantgrid.tech/image/logo-social.png',
+        image: 'https://elegantgrid.tech/image/logo-social.png',
         telephone: '+94765892413',
         email: 'the.elegant.grid@gmail.com',
         priceRange: '$$',
@@ -353,7 +353,7 @@ ${gaSnippet}
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:image" content="https://theelegantgrid.com/image/logo-social.png" />
+  <meta property="og:image" content="https://elegantgrid.tech/image/logo-social.png" />
   <meta property="og:image:alt" content="The Elegant Grid — CV Writing Service in ${c.name}" />
   <meta property="og:locale" content="en_US" />
 
@@ -362,7 +362,7 @@ ${gaSnippet}
   <meta name="twitter:site" content="@theelegantgrid" />
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${desc}" />
-  <meta name="twitter:image" content="https://theelegantgrid.com/image/logo-social.png" />
+  <meta name="twitter:image" content="https://elegantgrid.tech/image/logo-social.png" />
 
   <!-- ─── Theme / PWA ─── -->
   <meta name="theme-color" content="#0f0f0f" />
@@ -482,7 +482,7 @@ ${footer()}
 }
 
 function locationsHubPage() {
-  const url = 'https://theelegantgrid.com/locations';
+  const url = 'https://elegantgrid.tech/locations';
   const title = 'CV Writing Services Across Sri Lanka | The Elegant Grid';
   const desc = 'The Elegant Grid provides professional CV, resume, and cover letter writing services online across Sri Lanka — including Colombo, Kandy, Galle, Negombo, Jaffna, Kurunegala, Gampaha, and Matara.';
 
@@ -495,11 +495,11 @@ function locationsHubPage() {
         url,
         name: title,
         description: desc,
-        isPartOf: { '@id': 'https://theelegantgrid.com/#website' },
+        isPartOf: { '@id': 'https://elegantgrid.tech/#website' },
         breadcrumb: {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://theelegantgrid.com/' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elegantgrid.tech/' },
             { '@type': 'ListItem', position: 2, name: 'Locations', item: url },
           ],
         },
@@ -510,7 +510,7 @@ function locationsHubPage() {
           '@type': 'ListItem',
           position: idx + 1,
           name: `CV Writing Service in ${c.name}`,
-          url: `https://theelegantgrid.com/cv-writing-service-${c.slug}`,
+          url: `https://elegantgrid.tech/cv-writing-service-${c.slug}`,
         })),
       },
     ],
@@ -556,7 +556,7 @@ ${gaSnippet}
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:image" content="https://theelegantgrid.com/image/logo-social.png" />
+  <meta property="og:image" content="https://elegantgrid.tech/image/logo-social.png" />
   <meta property="og:image:alt" content="The Elegant Grid — Locations We Serve" />
   <meta property="og:locale" content="en_US" />
 
@@ -565,7 +565,7 @@ ${gaSnippet}
   <meta name="twitter:site" content="@theelegantgrid" />
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${desc}" />
-  <meta name="twitter:image" content="https://theelegantgrid.com/image/logo-social.png" />
+  <meta name="twitter:image" content="https://elegantgrid.tech/image/logo-social.png" />
 
   <!-- ─── Theme / PWA ─── -->
   <meta name="theme-color" content="#0f0f0f" />
