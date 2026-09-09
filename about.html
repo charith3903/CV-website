@@ -5,14 +5,6 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="image/logo-icon.png" />
   <meta name="google-site-verification" content="EtRf5AR_Bwe78my98YXGcxAbP3IAm6jEaLNcoJSj36k" />
-  <!-- Google tag (gtag.js) - replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -24,7 +16,10 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1646037953797153');
-    fbq('track', 'PageView');
+    window.egEventId = function() {
+      return 'eg_' + Date.now() + '_' + Math.random().toString(36).substr(2,9);
+    };
+    fbq('track', 'PageView', {}, {eventID: window.egEventId()});
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1646037953797153&ev=PageView&noscript=1"
@@ -318,12 +313,12 @@
         </div>
         <div class="footer-contact">
           <h4>Contact Us 24/7</h4>
-          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413">+94 76 589 2413</a></div>
+          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413" onclick="fbq('track','Contact',{content_name:'Phone Click'},{eventID: window.egEventId()});">+94 76 589 2413</a></div>
           <div class="contact-item"><span>📧</span><a
               href="mailto:the.elegant.grid@gmail.com">the.elegant.grid@gmail.com</a></div>
           <div class="contact-item"><span>⏰</span><span>Available 24/7</span></div>
           <a href="https://wa.me/94765892413?text=Hi!%20I'm%20interested%20in%20your%20CV%20services."
-            class="footer-cta" target="_blank">💬 Chat Now</a>
+            class="footer-cta" onclick="fbq('track','Lead',{content_name:'General WhatsApp Enquiry'},{eventID: window.egEventId()});" target="_blank">💬 Chat Now</a>
         </div>
       </div>
       <div class="footer-bottom">

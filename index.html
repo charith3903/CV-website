@@ -5,14 +5,6 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="image/logo-icon.png" />
   <meta name="google-site-verification" content="EtRf5AR_Bwe78my98YXGcxAbP3IAm6jEaLNcoJSj36k" />
-  <!-- Google tag (gtag.js) - replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -24,7 +16,10 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1646037953797153');
-    fbq('track', 'PageView');
+    window.egEventId = function() {
+      return 'eg_' + Date.now() + '_' + Math.random().toString(36).substr(2,9);
+    };
+    fbq('track', 'PageView', {}, {eventID: window.egEventId()});
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1646037953797153&ev=PageView&noscript=1"
@@ -154,7 +149,7 @@
         <a class="nav-link active" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About Us</a>
         <a class="nav-link" href="our-service.html">Our Service</a>
-        <a class="nav-link" href="our-packages.html">Our Packages</a>
+        <a class="nav-link" href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Nav Menu'});">Our Packages</a>
         <a class="nav-link" href="our-work.html">Our Work</a>
         <a class="nav-link" href="blog.html">Blog</a>
         <a class="nav-link" href="locations.html">Locations</a>
@@ -201,7 +196,7 @@
           </div>
 
           <div class="hero__actions">
-            <a class="button" href="our-packages.html">View Packages</a>
+            <a class="button" href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Homepage Hero'});">View Packages</a>
             <a class="button"
               href="https://wa.me/94765892413?text=Hi%20The%20Elegant%20Grid!%20%F0%9F%91%8B%20I%27m%20interested%20in%20your%20CV%20services."
               target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E); border: none;">💬 WhatsApp
@@ -282,7 +277,7 @@
               <h3>Pay When Happy</h3>
               <p>No payment until you're 100% satisfied. Your happiness is our success.</p>
             </div>
-            <a class="button button--ghost" href="our-packages.html">See Packages</a>
+            <a class="button button--ghost" href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Homepage Highlights'});">See Packages</a>
           </article>
         </div>
       </section>
@@ -368,7 +363,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="our-service.html">Our Services</a></li>
-            <li><a href="our-packages.html">Packages & Pricing</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">Packages & Pricing</a></li>
             <li><a href="our-work.html">Our Work</a></li>
             <li><a href="locations.html">Locations We Serve</a></li>
           </ul>
@@ -378,11 +373,11 @@
         <div class="footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="our-packages.html">Professional CVs</a></li>
-            <li><a href="our-packages.html">LinkedIn Profiles</a></li>
-            <li><a href="our-packages.html">Portfolio Websites</a></li>
-            <li><a href="our-packages.html">Resume Websites</a></li>
-            <li><a href="our-packages.html">Combo Packages</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">Professional CVs</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">LinkedIn Profiles</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">Portfolio Websites</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">Resume Websites</a></li>
+            <li><a href="our-packages.html" onclick="fbq('trackCustom','PackagesIntent',{source:'Footer'});">Combo Packages</a></li>
           </ul>
         </div>
 
@@ -391,7 +386,7 @@
           <h4>Contact Us 24/7</h4>
           <div class="contact-item">
             <span>💬</span>
-            <a href="https://wa.me/94765892413">+94 76 589 2413</a>
+            <a href="https://wa.me/94765892413" onclick="fbq('track','Contact',{content_name:'Phone Click'},{eventID: window.egEventId()});">+94 76 589 2413</a>
           </div>
           <div class="contact-item">
             <span>📧</span>
@@ -402,7 +397,7 @@
             <span>Available 24/7</span>
           </div>
           <a href="https://wa.me/94765892413?text=Hi!%20I'm%20interested%20in%20your%20CV%20services."
-            class="footer-cta" target="_blank">💬 Chat Now</a>
+            class="footer-cta" onclick="fbq('track','Lead',{content_name:'General WhatsApp Enquiry'},{eventID: window.egEventId()});" target="_blank">💬 Chat Now</a>
         </div>
       </div>
 

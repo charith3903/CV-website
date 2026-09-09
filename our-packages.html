@@ -5,14 +5,6 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="image/logo-icon.png" />
   <meta name="google-site-verification" content="EtRf5AR_Bwe78my98YXGcxAbP3IAm6jEaLNcoJSj36k" />
-  <!-- Google tag (gtag.js) - replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -24,12 +16,21 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1646037953797153');
-    fbq('track', 'PageView');
+    window.egEventId = function() {
+      return 'eg_' + Date.now() + '_' + Math.random().toString(36).substr(2,9);
+    };
+    fbq('track', 'PageView', {}, {eventID: window.egEventId()});
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1646037953797153&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <script>
+    fbq('track', 'ViewContent', {
+      content_name: 'Packages Page',
+      content_category: 'CV Services'
+    }, {eventID: window.egEventId()});
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ─── Primary SEO ─── -->
@@ -273,7 +274,7 @@
 
       <!-- CV PACKAGES -->
       <section class="section">
-        <div class="package-category">
+        <div class="package-category" data-eg-section="CV Packages">
           <div class="package-category-title">
             <span class="icon">📄</span>
             <h3>CV Packages</h3>
@@ -293,6 +294,7 @@
               <div class="delivery-time">⚡ Delivery within 1 day</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Starter%20CV*%20package%20(Rs.%20600)%20%F0%9F%93%84"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Starter CV',value:600,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -311,6 +313,7 @@
               <div class="delivery-time">⚡ Delivery within 1 day</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Professional%20CV*%20package%20(Rs.%20750)%20%F0%9F%93%84"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Professional CV',value:750,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -333,6 +336,7 @@
               <div class="delivery-time">⚡ Delivery within 1 day</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Lifetime%20Editable%20CV*%20package%20(Rs.%201%2C000)%20%F0%9F%93%84"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Lifetime Editable CV',value:1000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -352,6 +356,7 @@
               <div class="delivery-time">⚡ Delivery within 2 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Global%20ATS%20CV*%20package%20(Rs.%202%2C000)%20%F0%9F%8C%8D"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Global ATS CV',value:2000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -373,6 +378,7 @@
               <div class="delivery-time">⚡ Delivery within 2-5 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Premium%20International%20CV*%20package%20(Rs.%203%2C000)%20%F0%9F%91%94"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Premium International CV',value:3000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -382,7 +388,7 @@
 
       <!-- LINKEDIN PACKAGES -->
       <section class="section">
-        <div class="package-category">
+        <div class="package-category" data-eg-section="LinkedIn Packages">
           <div class="package-category-title">
             <span class="icon">💼</span>
             <h3>LinkedIn Packages</h3>
@@ -407,6 +413,7 @@
               <div class="delivery-time">⚡ Delivery within 2-3 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Basic%20LinkedIn%20Profile*%20package%20(Rs.%201%2C000)%20%F0%9F%92%BC"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Basic LinkedIn',value:1000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -428,6 +435,7 @@
               <div class="delivery-time">⚡ Delivery within 2-3 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Enhanced%20LinkedIn%20Profile*%20package%20(Rs.%202%2C500)%20%F0%9F%92%BC"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Enhanced LinkedIn',value:2500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -450,6 +458,7 @@
               <div class="delivery-time">⚡ Delivery within 3-5 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Premium%20LinkedIn%20Profile*%20package%20(Rs.%203%2C500)%20%F0%9F%92%BC"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Premium LinkedIn',value:3500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -459,7 +468,7 @@
 
       <!-- PORTFOLIO WEBSITE PACKAGES -->
       <section class="section">
-        <div class="package-category">
+        <div class="package-category" data-eg-section="Portfolio Websites">
           <div class="package-category-title">
             <span class="icon">🌐</span>
             <h3>Portfolio Website Packages</h3>
@@ -482,6 +491,7 @@
               <div class="delivery-time">⚡ Delivery within 3-5 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Basic%20Portfolio%20Site*%20package%20(Rs.%202%2C500)%20%F0%9F%8C%90"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Basic Portfolio',value:2500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -503,6 +513,7 @@
               <div class="delivery-time">⚡ Delivery within 5-7 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Professional%20Portfolio%20Site*%20package%20(Rs.%205%2C000)%20%F0%9F%8C%90"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Professional Portfolio',value:5000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -524,6 +535,7 @@
               <div class="delivery-time">⚡ Delivery within 7-10 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Premium%20Portfolio%20Site*%20package%20(Rs.%208%2C000)%20%F0%9F%8C%90"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Premium Portfolio',value:8000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -533,7 +545,7 @@
 
       <!-- RESUME WEBSITE PACKAGES -->
       <section class="section">
-        <div class="package-category">
+        <div class="package-category" data-eg-section="Resume Websites">
           <div class="package-category-title">
             <span class="icon">💻</span>
             <h3>Resume Website Packages</h3>
@@ -556,6 +568,7 @@
               <div class="delivery-time">⚡ Delivery within 2-3 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Basic%20Resume%20Website*%20package%20(Rs.%201%2C500)%20%F0%9F%92%BB"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Basic Resume Website',value:1500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -576,6 +589,7 @@
               <div class="delivery-time">⚡ Delivery within 3-5 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Professional%20Resume%20Website*%20package%20(Rs.%203%2C500)%20%F0%9F%92%BB"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Professional Resume Website',value:3500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -597,6 +611,7 @@
               <div class="delivery-time">⚡ Delivery within 5-7 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Executive%20Resume%20Website*%20package%20(Rs.%206%2C000)%20%F0%9F%92%BB"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Executive Resume Website',value:6000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get Started</a>
             </article>
 
@@ -606,7 +621,7 @@
 
       <!-- COMBO PACKAGES -->
       <section class="section">
-        <div class="package-category">
+        <div class="package-category" data-eg-section="Combo Packages">
           <div class="package-category-title">
             <span class="icon">🎁</span>
             <h3>Combo Packages <span class="savings-tag">SAVE MORE!</span></h3>
@@ -628,6 +643,7 @@
               <div class="delivery-time">⚡ Delivery within 3-4 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Starter%20Combo*%20package%20(Rs.%201%2C550)%20%F0%9F%8E%81%20Save%20Rs.%20200!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Starter Combo',value:1550,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -647,6 +663,7 @@
               <div class="delivery-time">⚡ Delivery within 4-5 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Professional%20Combo*%20package%20(Rs.%203%2C200)%20%F0%9F%8E%81%20Save%20Rs.%20300!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Professional Combo',value:3200,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -666,6 +683,7 @@
               <div class="delivery-time">⚡ Delivery within 5-7 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Executive%20Combo*%20package%20(Rs.%206%2C000)%20%F0%9F%8E%81%20Save%20Rs.%20500!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Executive Combo',value:6000,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -685,6 +703,7 @@
               <div class="delivery-time">⚡ Delivery within 5-7 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Digital%20Presence%20Combo*%20package%20(Rs.%205%2C500)%20%F0%9F%8E%81%20Save%20Rs.%20500!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Digital Presence Combo',value:5500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -706,6 +725,7 @@
               <div class="delivery-time">⚡ Delivery within 10-14 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Full%20Brand%20Package*%20(Rs.%2012%2C500)%20%F0%9F%8E%81%20Save%20Rs.%202%2C500!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Full Brand Package',value:12500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -725,6 +745,7 @@
               <div class="delivery-time">⚡ Delivery within 7-10 days</div>
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20choose%20*Creative%20Professional%20Combo*%20(Rs.%207%2C500)%20%F0%9F%8E%81%20Save%20Rs.%201%2C000!"
+                onclick="fbq('track','InitiateCheckout',{content_name:'Creative Professional Combo',value:7500,currency:'LKR'},{eventID: window.egEventId()});"
                 target="_blank" style="margin-top: 1.5rem; display: inline-block;">💬 Get This Deal</a>
             </article>
 
@@ -779,6 +800,7 @@
             <div class="hero__actions" style="justify-content: center; margin-top: 1.5rem;">
               <a class="button whatsapp-btn"
                 href="https://wa.me/94765892413?text=Hey%2C%20I%20need%20help%20choosing%20the%20right%20package%20for%20me%20%F0%9F%A4%94"
+                onclick="fbq('track','Lead',{content_name:'General WhatsApp Enquiry'},{eventID: window.egEventId()});"
                 target="_blank">💬 Let's Discuss / කතා කරමු</a>
               <a class="button button--ghost" href="our-work.html">See Our Work First</a>
             </div>
@@ -825,12 +847,12 @@
         </div>
         <div class="footer-contact">
           <h4>Contact Us 24/7</h4>
-          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413">+94 76 589 2413</a></div>
+          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413" onclick="fbq('track','Contact',{content_name:'Phone Click'},{eventID: window.egEventId()});">+94 76 589 2413</a></div>
           <div class="contact-item"><span>📧</span><a
               href="mailto:the.elegant.grid@gmail.com">the.elegant.grid@gmail.com</a></div>
           <div class="contact-item"><span>⏰</span><span>Available 24/7</span></div>
           <a href="https://wa.me/94765892413?text=Hi!%20I'm%20interested%20in%20your%20CV%20services."
-            class="footer-cta" target="_blank">💬 Chat Now</a>
+            class="footer-cta" onclick="fbq('track','Lead',{content_name:'General WhatsApp Enquiry'},{eventID: window.egEventId()});" target="_blank">💬 Chat Now</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -840,6 +862,45 @@
     </footer>
   </div>
   <script src="universe.js"></script>
+  <script>
+  (function(){
+    var fired = {};
+    window.addEventListener('scroll', function(){
+      var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+      [50, 90].forEach(function(mark){
+        if (pct >= mark && !fired[mark]) {
+          fired[mark] = true;
+          fbq('trackCustom', 'ScrollDepth', {
+            depth: mark + '%',
+            page: document.title
+          });
+        }
+      });
+    }, { passive: true });
+  })();
+  </script>
+  <script>
+  setTimeout(function(){
+    fbq('trackCustom', 'EngagedVisitor', { seconds: 45, page: 'Packages' });
+  }, 45000);
+  </script>
+  <script>
+  (function(){
+    var sections = document.querySelectorAll('[data-eg-section]');
+    var seen = {};
+    if (!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var name = e.target.getAttribute('data-eg-section');
+        if (e.isIntersecting && !seen[name]) {
+          seen[name] = true;
+          fbq('trackCustom', 'CategoryView', { category: name });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(function(s){ io.observe(s); });
+  })();
+  </script>
 </body>
 
 </html>

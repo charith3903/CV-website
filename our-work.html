@@ -5,14 +5,6 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="image/logo-icon.png" />
   <meta name="google-site-verification" content="EtRf5AR_Bwe78my98YXGcxAbP3IAm6jEaLNcoJSj36k" />
-  <!-- Google tag (gtag.js) - replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -24,12 +16,21 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1646037953797153');
-    fbq('track', 'PageView');
+    window.egEventId = function() {
+      return 'eg_' + Date.now() + '_' + Math.random().toString(36).substr(2,9);
+    };
+    fbq('track', 'PageView', {}, {eventID: window.egEventId()});
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1646037953797153&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <script>
+    fbq('track', 'ViewContent', {
+      content_name: 'Portfolio Page',
+      content_category: 'CV Services'
+    }, {eventID: window.egEventId()});
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ─── Primary SEO ─── -->
@@ -143,42 +144,42 @@
             <img src="our work/CV1.webp" alt="Professional CV Design 1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/CV2.webp" alt="Professional CV Design 2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/CV3.webp" alt="Professional CV Design 3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/CV4.webp" alt="Professional CV Design 4" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/CV5.webp" alt="Professional CV Design 5" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/profesional 1.webp" alt="Professional CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -187,21 +188,21 @@
             <img src="our work/ATS CV.webp" alt="ATS Optimized CV" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">ATS Optimized</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="ats">
             <img src="our work/New ATS score.webp" alt="ATS Score CV" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">ATS Score</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="ats">
             <img src="our work/qa 1.webp" alt="QA CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">ATS Optimized</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -210,77 +211,77 @@
             <img src="our work/Nursing 1.webp" alt="Nursing CV Design 1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/nursing 2.webp" alt="Nursing CV Design 2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/nursing 3.webp" alt="Nursing CV Design 3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/Nursing 4.webp" alt="Nursing CV Design 4" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n1.webp" alt="Nursing CV Design N1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n2.webp" alt="Nursing CV Design N2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n3.webp" alt="Nursing CV Design N3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n4.webp" alt="Nursing CV Design N4" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n5.webp" alt="Nursing CV Design N5" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n6.webp" alt="Nursing CV Design N6" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="nursing">
             <img src="our work/n7.webp" alt="Nursing CV Design N7" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Healthcare</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -289,21 +290,21 @@
             <img src="our work/executive 1.webp" alt="Executive CV Design 1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Executive</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="executive">
             <img src="our work/executive 2.webp" alt="Executive CV Design 2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Executive</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="executive">
             <img src="our work/executive 3.webp" alt="Executive CV Design 3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Executive</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -312,35 +313,35 @@
             <img src="our work/1.webp" alt="CV Design 1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/2.webp" alt="CV Design 2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/3.webp" alt="CV Design 3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/001.webp" alt="CV Design 001" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/add 1.webp" alt="Additional CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -349,28 +350,28 @@
             <img src="our work/kavindi's cv.webp" alt="Client CV - Kavindi" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Client Work</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/mohamed cv.webp" alt="Client CV - Mohamed" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Client Work</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/mohamed.webp" alt="Client CV - Mohamed 2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Client Work</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/rachini cv.webp" alt="Client CV - Rachini" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Client Work</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -379,70 +380,70 @@
             <img src="our work/w1.webp" alt="Work Sample W1" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w2.webp" alt="Work Sample W2" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w3.webp" alt="Work Sample W3" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w4.webp" alt="Work Sample W4" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w5.webp" alt="Work Sample W5" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w6.webp" alt="Work Sample W6" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w7.webp" alt="Work Sample W7" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w8.webp" alt="Work Sample W8" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w9.webp" alt="Work Sample W9" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/w10.webp" alt="Work Sample W10" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -451,28 +452,28 @@
             <img src="our work/Screenshot 2025-08-03 195639.webp" alt="Recent CV Work" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2025-08-17 152709.webp" alt="Recent CV Work" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2025-08-17 152801.webp" alt="Recent CV Work" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2025-08-17 152846.webp" alt="Recent CV Work" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Professional</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
 
@@ -481,98 +482,98 @@
             <img src="our work/Screenshot 2026-01-20 220305.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220404.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220435.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220503.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220529.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220551.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220623.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220651.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220723.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220749.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220812.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220847.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 220939.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
           <div class="cv-item" data-category="professional">
             <img src="our work/Screenshot 2026-01-20 221013.webp" alt="Latest CV Design" loading="lazy">
             <div class="cv-overlay">
               <span class="cv-badge">Latest</span>
-              <button class="view-btn">🔍 View Full</button>
+              <button class="view-btn" onclick="fbq('trackCustom','SampleView',{content_name:'CV Sample'});">🔍 View Full</button>
             </div>
           </div>
         </div>
@@ -642,12 +643,12 @@
         </div>
         <div class="footer-contact">
           <h4>Contact Us 24/7</h4>
-          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413">+94 76 589 2413</a></div>
+          <div class="contact-item"><span>💬</span><a href="https://wa.me/94765892413" onclick="fbq('track','Contact',{content_name:'Phone Click'},{eventID: window.egEventId()});">+94 76 589 2413</a></div>
           <div class="contact-item"><span>📧</span><a
               href="mailto:the.elegant.grid@gmail.com">the.elegant.grid@gmail.com</a></div>
           <div class="contact-item"><span>⏰</span><span>Available 24/7</span></div>
           <a href="https://wa.me/94765892413?text=Hi!%20I'm%20interested%20in%20your%20CV%20services."
-            class="footer-cta" target="_blank">💬 Chat Now</a>
+            class="footer-cta" onclick="fbq('track','Lead',{content_name:'General WhatsApp Enquiry'},{eventID: window.egEventId()});" target="_blank">💬 Chat Now</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -741,6 +742,23 @@
         if (e.key === 'ArrowRight') nextBtn.click();
       });
     })();
+  </script>
+  <script>
+  (function(){
+    var fired = {};
+    window.addEventListener('scroll', function(){
+      var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+      [50, 90].forEach(function(mark){
+        if (pct >= mark && !fired[mark]) {
+          fired[mark] = true;
+          fbq('trackCustom', 'ScrollDepth', {
+            depth: mark + '%',
+            page: document.title
+          });
+        }
+      });
+    }, { passive: true });
+  })();
   </script>
 </body>
 
